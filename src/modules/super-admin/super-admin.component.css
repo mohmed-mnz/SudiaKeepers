@@ -1,0 +1,108 @@
+/* .widget-container {
+    display: flex !important;
+    align-items: space-between !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    .widget {
+      height: 150px !important;
+      background-color: #fff;
+      color: #fff;
+      border-radius: 5px;
+      margin: 10px;
+      box-shadow: 5px 5px 5px #939393;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      &.light-blue {
+        background-color:#00ACEE;
+      }
+      &.yellow {
+        background-color: #F9B015;
+      }
+      &.red {
+        background-color: rgb(126, 5, 5);
+      }
+      &.blue {
+        background-color: #3B5999;
+      }
+      &.blue-v {
+        background-color: #3B5111;
+      }
+     
+  
+      .icon {
+      
+        font-size: 60px;
+        text-align: center;
+       
+      }
+      .value {
+        text-align: center;
+      
+        .top {
+          font-size: 30px;
+        
+        }
+        .bottom {
+          font-size: 20px;
+          margin-top: 10px;
+        
+        }
+      }
+    }
+    .widget:hover {
+      transform: scale(1.05);
+    }
+  } */
+
+
+  
+.sidebar{
+  min-height: 100vh;
+  }
+  .nav-items {
+      padding-top: 40px;
+      .nav-item {
+        padding: 25px 20px;
+        cursor: pointer;
+        @media only screen and (max-width: 1300px) {
+          padding: 25px 40px;
+        }
+        &:hover {
+          background-color: #5046E3;
+          border-radius: 10px;
+        }
+        fa-icon {
+          margin: auto;
+          font-size: 15px;
+     
+        }
+        span {
+          padding:5px;
+          font-size: 15px;
+         font-weight: 1000;
+          display: inline;
+          @media only screen and (max-width: 1300px) {
+            display: none;
+          }
+        }
+      }
+    }
+  
+    .nav-item.active {
+      background-color: #5046E3; /* Change to your preferred color */
+      border-radius: 10px;
+  }
+  
+  a{
+      text-decoration: none;
+      color: #fff;
+  }
+  
+  .centered-content {
+      display: flex;
+      /* justify-content: center; 
+      align-items: center;  */
+      height: 100%; 
+     
+  }

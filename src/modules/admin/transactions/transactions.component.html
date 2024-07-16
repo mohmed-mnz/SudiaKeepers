@@ -1,0 +1,165 @@
+
+
+
+
+ 
+<p-toast [showTransformOptions]="'translateY(100%)'" [showTransitionOptions]="'500ms'" [hideTransitionOptions]="'500ms'"
+[showTransformOptions]="'translateX(100%)'"></p-toast> 
+
+
+<div class="container ">
+
+  <div class="table-container  col-xs-12 col-xl-9" style="width: 100%;padding: 0; ">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2"  style="margin-top:25px">
+       
+      </div>
+     </div>
+   
+     <div style="max-height: 550px; overflow-y: auto;">
+ <p-table #dt1 [value]="transactions"  sortField="type" sortMode="single" dataKey="cashier" rowGroupMode="subheader"
+     groupRowsBy="cashier" [tableStyle]="{ 'min-width': '50rem' ,'width':'100%','max-height':'100px'}" (onPage)="pageChange($event)"
+     styleClass="table " selectionMode="single" [showCurrentPageReport]="true" 
+     (onRowExpand)="onRowExpand($event)" (onRowCollapse)="onRowCollapse($event)"
+     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [globalFilterFields]="['type', 'price', 'from_time', 'to_time','duration']">
+     <ng-template pTemplate="caption" class="row" style="border: none;background-color: #ac8a87;">
+       <div class="row" style="padding: 0 1rem;">
+         <div class="flex col-md-6">
+           <span class="p-input-icon-left ml-auto">
+             <i class="pi pi-search"></i>
+             <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+               placeholder='{{"users.searchKey"|translate}}' />
+           </span>
+         </div>
+         <div class="col-md-4"></div>
+         <div class="flex  col-md-2">
+           <button style="width:100%;height:100%;" class="print" (click)="exportToExcel(dt1.filteredValue)">{{'button.print'|translate}}</button>
+         </div>
+       </div>
+     </ng-template>
+     <ng-template pTemplate="header">
+       <tr>
+         <th>{{"transactions.type"|translate}}
+           <p-columnFilter type="text" field="type" display="menu" matchMode="equals">
+             <ng-template pTemplate="filter" let-col let-filter="filterCallback">
+               <div class="p-fluid">
+                 <p-dropdown [options]="typeFilterOptions" [style]="{'width':'100%'}" [showClear]="true"
+                   (onChange)="dt1.filterGlobal($any($event.value), 'equals')">
+                 </p-dropdown>
+               </div>
+             </ng-template>
+           </p-columnFilter>
+         </th>
+         <th pSortableColumn="price">
+           <p-sortIcon style="color: #fff;" field="price"></p-sortIcon>
+           {{"transactions.price"|translate}}
+         </th>
+         <th>{{"transactions.from"|translate}}
+           <input pInputText style="width:80%;display: inline;" type="date" (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+             placeholder='{{"users.searchKey"|translate}}' />
+         </th>
+         <th>{{"transactions.to"|translate}}
+           <input pInputText style="width:80%;display: inline;" type="date" (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+             placeholder='{{"users.searchKey"|translate}}' />
+         </th>
+         <th>{{"transactions.duration"|translate}}</th>
+       </tr>
+     </ng-template>
+     <ng-template pTemplate="groupfooter" let-customer>
+      <tr class="p-rowgroup-footer">
+          <td colspan="4" style="text-align: right">{{"transactions.totalPrice"|translate}}</td>
+          <td>{{calculateCustomerTotal(customer.cashier)}}</td>
+      </tr>
+  </ng-template>
+     <ng-template pTemplate="groupheader" let-trans let-rowIndex="rowIndex" let-expanded="expanded">
+       <tr>
+         <td colspan="5">
+           <span>
+             <button type="button" pButton pRipple [pRowToggler]="trans"  aria-hidden="false"
+               class="p-button-text p-button-rounded p-button-plain mr-2">
+               <fa-icon [icon]="faAngleLeft" style="color:#ccc;"></fa-icon>
+             </button>
+           </span>
+           <span style="margin-top: -10px;" class="font-bold ml-2">{{ findUserName(trans.cashier) }}</span>
+          
+         </td>
+       </tr>
+
+     </ng-template>
+     <ng-template  pTemplate="rowexpansion" let-trans >
+   
+       <tr [pSelectableRow]="selsectedItem"   [ngClass]="{'selected-row': trans.type === 'fine', 'other-class': trans.type == 'visitor'}">
+        <td>{{trans.type}}</td>
+         <td>{{trans.price}}</td>
+         <td>{{ trans.from_time | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+         <td>{{trans.to_time | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+         <td>{{trans.duration_days}}{{"transactions.d"|translate}} , {{trans.duration_hours}}{{"transactions.h"|translate}},
+           {{trans.duration_minutes}}{{"transactions.m"|translate}}
+         </td>
+       </tr>
+  
+     </ng-template>
+   </p-table>
+     </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="UpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 80%;">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">  {{"users.editTitle"|translate}} </h2>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="userUpdateForm">
+              <div style="margin-bottom: 10;" class="row">
+                  <div  class="col-md-12">
+                    <label class="form-label">{{"users.username"|translate}}</label>
+                    <input class="form-control"  formControlName="username"/>
+                  </div>
+              </div>
+              <div  class="row">
+                <div class="col-md-12">
+                    <label class="form-label">{{"users.phone"|translate}}</label>
+                    <app-EgyptPhoneNumberInput style="width: 100%;"  formControlName="phone" />
+                </div>
+            </div>
+            <div style="margin-bottom: 10;" class="row">
+              <div class="col-md-12">
+                
+                <label class="form-label">{{"users.email"|translate}}</label>
+                <input type="email" class="form-control"   formControlName="email" />
+             </div>
+          </div>
+          <div style="margin-bottom: 20px;" class="row">
+            <div class="col-md-12">
+              <div class="row">
+                  <div class="col-md-12">
+                    <label  class="form-label">{{"users.role"|translate}}</label>
+                    <p-dropdown  formControlName="role" [options]="roles" optionLabel="name" optionValue="value"  placeholder="{{'users.rolePlacehoder'|translate}}"></p-dropdown>
+                  </div>
+              </div>
+            </div>
+        </div>
+       
+          </form>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn ssc-table-button" data-bs-dismiss="modal">
+          {{"tabel.close"|translate}}
+        </button>
+        <button type="button" [disabled]="!userUpdateForm.valid" class="btn ssc-table-button"
+          (click)="onUpdate()"  (keyup.enter)="onUpdate()" data-bs-dismiss="modal">
+          {{"tabel.submit"|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

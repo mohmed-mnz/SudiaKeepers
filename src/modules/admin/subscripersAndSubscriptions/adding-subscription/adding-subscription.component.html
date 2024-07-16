@@ -1,0 +1,90 @@
+
+<p-toast [showTransformOptions]="'translateY(100%)'" [showTransitionOptions]="'500ms'" [hideTransitionOptions]="'500ms'"
+[showTransformOptions]="'translateX(100%)'"></p-toast>
+
+<p-steps  [(activeIndex)]="activeIndex" [model]="items" (onStepClick)="onStepClick($event)"></p-steps>
+<div class="container" *ngIf="activeIndex === 0">
+  <div class="form">
+    <h2 class="text-center" style="margin-bottom:-5px;" >{{"subscriptions.addTitle"|translate}}</h2>
+    <form [formGroup]="subscriperForm">
+      <div class="row">
+        <div class="col-md-8">
+          <span  style="color: red; margin:0 5px;" *ngIf="subscriperForm.get('name')?.errors?.['required']">*</span>
+          <label class="form-label">{{"subscriptions.name"|translate}}</label>
+          <input class="form-control"  formControlName="name" required/>
+       </div>
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-8">
+          <!-- <span style="color: red; margin:0 5px;" *ngIf="subscriperForm.get('address')?.errors?.['required']">*</span> -->
+          <label class="form-label">{{"subscriptions.address"|translate}}</label>
+          <input class="form-control"  formControlName="address" required/>
+       </div>
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-4">
+          <span style="color: red; margin:0 5px;" *ngIf="subscriperForm.get('phone_number')?.errors?.['required']">*</span>
+          <label class="form-label">{{"subscriptions.phoneNumber"|translate}}</label>
+          <app-EgyptPhoneNumberInput   formControlName="phone_number" />
+       </div>
+        <div class="col-md-4">
+          <!-- <span style="color: red; margin:0 5px;" *ngIf="subscriperForm.get('national_id')?.errors?.['required']">*</span> -->
+          <label class="form-label">{{"subscriptions.nationalID"|translate}}</label>
+          <app-EgyptNationalIdInput  formControlName="national_id" />
+       </div>
+      </div>
+      <div class="row" style="margin-top: 10px;">
+        <div class="col-md-4">
+          <span style="color: red; margin:0 5px;" *ngIf="subscriperForm.get('car_full_num')?.errors?.['required']">*</span>
+          <label class="form-label">{{"subscriptions.carNumber"|translate}}</label>
+          <input class="form-control"  formControlName="car_full_num" required/>
+       </div>
+        <div class="col-md-4">
+          <span style="color: red; margin:0 5px;" *ngIf="subscriperForm.get('cardNumber')?.errors?.['required']">*</span>
+          <label class="form-label">{{"subscriptions.cardNumber"|translate}}</label>
+          <input class="form-control"  formControlName="cardNumber"/>
+       </div>
+      </div>
+      <button  class="add-button" (click)="nextStep()"[disabled]="!subscriperForm.valid">{{'button.next'|translate}}</button>
+      
+      <button type="submit" class="prev-button" (click)="discard()">{{'button.discard'|translate}}</button>
+    </form>
+  </div>
+</div>
+
+<div class="container" *ngIf="activeIndex === 1">
+  <div class="form">
+    <h2 class="text-center" style="margin: 0px;">{{"subscriptions.addTitle"|translate}}</h2>
+    <form [formGroup]="subscriptionForm">
+      <div class="row">
+        <div class="col-md-4">
+          <span style="color: red; margin:0 5px;" *ngIf="subscriptionForm.get('price')?.errors?.['required']">*</span>
+          <label class="form-label">{{"subscriptions.price"|translate}}</label>
+          <input type="number" class="form-control"  formControlName="price"/>
+       </div>
+
+      </div>
+     
+      <div class="row" style="margin-top: 10px;">
+        <h2 class="text-center"  >{{"subscriptions.subscriptionDate"|translate}}</h2>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <label class="form-label">{{"subscriptions.from"|translate}}</label>
+          <span style="color: red; margin:0 5px;" *ngIf="subscriptionForm.get('start_date')?.errors?.['required']">*</span>
+          <input type="date" class="form-control"  formControlName="start_date" required/>
+       </div>
+      
+        <div class="col-md-4">
+          <label class="form-label">{{"subscriptions.to"|translate}}</label>
+          <span style="color: red; margin:0 5px;" *ngIf="subscriptionForm.get('end_date')?.errors?.['required']">*</span>
+          <input type="date" class="form-control"  formControlName="end_date"  (ngModelChange)="compareTwoDates()" required/>
+          <div  *ngIf="error.isError"  class="row">
+            <div class="alert alert-danger">   {{ error.errorMessage }}</div>
+           </div>
+        </div>
+      </div> 
+      <button type="submit" class="prev-button" (click)="prevStep()" [disabled]="!subscriperForm.valid">{{'button.previous'|translate}}</button>     
+      <button type="submit" class="add-button"   (click)="onsubmit()"  [disabled]="!subscriptionForm.valid">{{'button.submit'|translate}}</button>
+    </form>
+  </div>
+</div>

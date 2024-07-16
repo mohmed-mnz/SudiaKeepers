@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="form"  style="margin: 2rem;width: 50%;">
+    <h2 class="text-center"  style="margin:-15px 0 25px 0  ;" >{{"users.pDetails"|translate}}</h2>
+    <form [formGroup]="userForm">
+      <div class="row">
+        <div class="col-md-12">
+          <label class="form-label">{{"users.username"|translate}}</label>
+          <input class="form-control"   formControlName="username" [ngClass]="{'disabled-field': userForm.get('email')?.disabled}"    />
+        </div>     
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-12">
+          <label class="form-label">{{"users.password"|translate}}</label>
+          <input type="password" class="form-control"  formControlName="password" [ngClass]="{'disabled-field': userForm.get('email')?.disabled}"   />
+       </div>
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-12">
+          <label class="form-label">{{"users.email"|translate}}</label>
+          <input class="form-control"  formControlName="email" [ngClass]="{'disabled-field': userForm.get('email')?.disabled}"   />
+          <div *ngIf="userForm.get('email')?.invalid && (userForm.get('email')?.dirty || userForm.get('phone')?.touched)">
+            <div style="color: red;" *ngIf="userForm.get('email')?.errors?.['pattern']">
+              {{"errorMess.invemail"|translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-12">
+          <label class="form-label">{{"users.phone"|translate}}</label>
+          <input  class="form-control"  formControlName="phone" [ngClass]="{'disabled-field': userForm.get('phone')?.disabled}"   />
+          <div *ngIf="userForm.get('phone')?.invalid && (userForm.get('phone')?.dirty || userForm.get('phone')?.touched)">
+            <div style="color: red;" *ngIf="userForm.get('phone')?.errors?.['pattern']">
+              {{"errorMess.invPhone"|translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-12">
+          <label class="form-label">{{"users.role"|translate}}</label>
+          <input class="form-control"  formControlName="role" [ngClass]="{'disabled-field': userForm.get('email')?.disabled}"   />
+       </div>
+      </div>
+
+      <button style="float: inline-start;" type="submit" class="prev-button" (click)="return()">{{'button.return'|translate}}</button>
+      
+      <button style="align-self: center;" type="submit" class="prev-button" (click)="restuser()">{{'button.reset'|translate}}</button>
+      <button  style="float: inline-end;"  [disabled]="!submitCanges" class="prev-button" (click)="submit()"  >{{'button.save'|translate}}</button>
+      <button  style="float: inline-end;"  [disabled]="!submitCanges" class="prev-button" (click)="discard()" >{{'button.discard'|translate}}</button>
+    </form>
+  </div>
+</div>
+
