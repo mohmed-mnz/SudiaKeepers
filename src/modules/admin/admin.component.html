@@ -1,0 +1,53 @@
+
+<div class="row " style="width: 100%;">
+    <div class="col-md-2" style="padding: 0;min-height: 100vh;">
+        <div class="sidebar">
+            <div class="nav-items">
+                <a routerLink="/admin/dashboard">
+                    <div routerLinkActive="active" class="nav-item">
+                        <fa-icon [icon]="faHome" ></fa-icon>
+                       <span>{{'MLayout.dashboard'|translate}}</span>
+                       
+                      </div>
+                  </a>
+              
+              <a  routerLink="/admin/users">
+                <div     routerLinkActive="active" class="nav-item">
+                    <fa-icon [icon]="faUserCircle"></fa-icon>
+                    <span>{{'MLayout.users'|translate}}</span>
+                  </div>
+              </a>
+                
+             
+              <a  routerLink="/admin/subscripers-and-subscriptios">
+                <div routerLinkActive="active" class="nav-item">
+                    <fa-icon [icon]="faAdd"></fa-icon>
+                    <span>{{'MLayout.subscriptions'|translate}}</span>
+                </div>
+              </a>
+              <a  routerLink="/admin/transactions">
+                <div routerLinkActive="active" class="nav-item">
+                  <img src="assets/icons8-traffic-barrier-64.png" style="width: 20px;" alt="My Icon">
+                  <span>{{'MLayout.trans'|translate}}</span>
+                </div>
+                </a>
+              <a  routerLink="/admin/settings">
+              <div routerLinkActive="active" class="nav-item">
+                <fa-icon [icon]="faGear"></fa-icon>
+                <span>{{'MLayout.settings'|translate}}</span>
+              </div>
+              </a>
+
+             
+            </div>
+          </div>
+        </div>
+        <div   class="col-md-10 " >
+            <router-outlet  >
+            </router-outlet>
+        </div>
+
+
+
+</div>
+   

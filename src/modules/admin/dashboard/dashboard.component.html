@@ -1,0 +1,109 @@
+
+<div class="widget-container">
+  <div class="row" >
+    <div class="col-md-3" >
+      
+      <div class="widget light-blue ">
+        <div class="icon">
+          <fa-icon [icon]="faRoad"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top"></div>
+          <div class="bottom">{{'dashboard.empty'|translate}}</div>
+      
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="widget blue">
+        <div class="icon">
+          <fa-icon [icon]="faUserCircle"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top">{{admins+cacheirs}}</div>
+          <div class="bottom">{{'dashboard.employees'|translate}}
+            <!-- <span>(admins)</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="widget red">
+        <div class="icon">
+          <fa-icon [icon]=" faAdd"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top">{{subscripers}}</div>
+          <div class="bottom"> {{'dashboard.subscriptions'|translate}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="widget yellow">
+        <div class="icon">
+          <fa-icon [icon]="faPersonArrowUpFromLine"></fa-icon>
+        </div>
+        <div class="value">
+          <div class="top">{{visitors}}</div>
+          <div class="bottom"> {{'dashboard.visitors'|translate}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="widget-container">
+  <div class="widget blue-v">
+    <div class="icon">
+      <fa-icon [icon]="faUserCircle"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{admins}}</div>
+      <div class="bottom">{{'dashboard.employees'|translate}}
+        <span>(admins)</span>
+      </div>
+    </div>
+  </div>
+  <div class="widget blue">
+    <div class="icon">
+      <fa-icon [icon]="faUserCircle"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{admins}}</div>
+      <div class="bottom">{{'dashboard.employees'|translate}}
+        <span>(admins)</span>
+      </div>
+    </div>
+  </div>
+  <div class="widget light-blue ">
+    <div class="icon">
+      <fa-icon [icon]="faUserCircle"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{cacheirs}}</div>
+      <div class="bottom">{{'dashboard.employees'|translate}}</div>
+      <span>(cacheirs)</span>
+    </div>
+  </div>
+  <div class="widget red">
+    <div class="icon">
+      <fa-icon [icon]=" faAdd"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{subscripers}}</div>
+      <div class="bottom"> {{'dashboard.subscriptions'|translate}}</div>
+    </div>
+  </div>
+  
+  <div class="widget yellow">
+    <div class="icon">
+      <fa-icon [icon]="faPersonArrowUpFromLine"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{visitors}}</div>
+      <div class="bottom"> {{'dashboard.visitors'|translate}}</div>
+    </div>
+  </div>
+  
+</div> -->
+<div style="margin-top: 20px; overflow: hidden;" class="chart-container" [chart]="chart"></div>

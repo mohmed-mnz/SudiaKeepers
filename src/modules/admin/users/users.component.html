@@ -1,0 +1,179 @@
+
+<p-toast [showTransformOptions]="'translateY(100%)'" [showTransitionOptions]="'500ms'" [hideTransitionOptions]="'500ms'"
+[showTransformOptions]="'translateX(100%)'"></p-toast> 
+
+
+<div class="container ">
+
+  <div class="table-container  col-xs-12 col-xl-9" style="width: 100%;padding: 0; ">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2"  style="margin-top:25px">
+       
+      </div>
+     </div>
+    <p-table #dt1 [value]="filteredData" 
+    [paginator]="true"
+     [rows]="13" 
+     [tableStyle]="{ 'min-width': '50rem' ,'width':'100%'}"
+      (onPage)="pageChange($event)"
+      styleClass="table " selectionMode="single" [(selection)]="selsectedItem"
+      dataKey="id"
+       [tableStyle]="{}"
+       [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+      [globalFilterFields]="['username', 'email', 'phone', 'role']"
+      paginatorLocale="fa-IR"
+      >
+      <ng-template pTemplate="caption" class="row" style="border: none;background-color: #ac8a87;">
+        <div class="row" style="padding: 0 1rem;">
+          <!-- <div class="col-md-1"></div> -->
+        <div class="flex col-md-6" >
+            <!-- <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button> -->
+            <span class="p-input-icon-left ml-auto">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')" placeholder='{{"users.searchKey"|translate}}' />
+            </span>
+        </div>
+        <div class="col-md-4"></div>
+            <div class="flex  col-md-2">
+                <!-- <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button> -->
+        
+              <button    style="width:100%;height:100%;"  class="print" (click)="exportToExcel(dt1.filteredValue)">{{'button.print'|translate}}</button>   
+            
+              <!-- <fa-icon  style="color: rgb(23, 92, 23); font-size: 24px;" [icon]=" faFileExcel" (click)="exportToExcel()"></fa-icon> -->
+       
+          </div>
+        </div>
+    </ng-template>
+      <ng-template  pTemplate="header">
+        <tr style="height: 10px;">
+          <th  pSortableColumn="username">
+            <p-sortIcon style="color: #fff;" field="username"></p-sortIcon>
+            {{"users.username"|translate}} 
+           
+            <p-columnFilter type="text" field="username" display="menu" 
+             [matchModeOptions]="lang === 'en' ? filterOptionsEn : filterOptionsAr" 
+             [ngClass]="{'arabic-language': lang === 'ar'}"></p-columnFilter>
+          </th>
+                
+                
+          <th>{{"users.email"|translate}} 
+            <p-columnFilter type="text" field="email" display="menu" 
+            [matchModeOptions]="lang === 'en' ? filterOptionsEn : filterOptionsAr" 
+            [ngClass]="{'arabic-language': lang === 'ar'}"></p-columnFilter>
+          </th>
+          <th>{{"users.phone"|translate}} 
+            <p-columnFilter type="text" field="phone" display="menu"
+             [matchModeOptions]="lang === 'en' ? filterOptionsEn : filterOptionsAr"
+              [ngClass]="{'arabic-language': lang === 'ar'}"></p-columnFilter>
+          </th>
+          <th>{{"users.role"|translate}}
+            <p-columnFilter type="text" field="role" display="menu"
+             [matchModeOptions]="lang === 'en' ? filterOptionsEn : filterOptionsAr" 
+             [ngClass]="{'arabic-language': lang === 'ar'}"></p-columnFilter>
+          </th>
+          <th  class="operations">
+            <button  class="btn table-button add-t-button " (click)="onAdd()">{{"tabel.add"|translate}}</button>
+          </th>
+          
+        </tr>
+      </ng-template>
+
+      <ng-template styleClass="selected-row" pTemplate="body" let-rowData let-rowIndex="rowIndex">
+        <tr [pSelectableRow]="selsectedItem">
+          <td>{{rowData.username}}</td>
+          <td>{{rowData.email}}</td>
+          <td>{{rowData.phone}}</td>
+          <td >{{rowData.role}}</td>
+          <td class="operations">
+            <mat-icon (click)="updatePopup(rowData)" style="color: #5C3D54;"  data-bs-toggle="modal" data-bs-target="#UpdateModal">edit</mat-icon>
+         <mat-icon style="margin: 0 20px;color: #5C3D54;"  (click)="onDelete(rowData.id)">delete</mat-icon>
+          </td>       
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="7">{{"users.noData"|translate}}</td>
+        </tr>
+    </ng-template>
+    </p-table>
+  </div>
+</div>
+
+
+<div class="modal fade" id="UpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 80%;">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">  {{"users.editTitle"|translate}} </h2>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="userUpdateForm">
+              <div style="margin-bottom: 10;" class="row">
+                  <div  class="col-md-12">
+                    <label class="form-label">{{"users.username"|translate}}</label>
+                    <input class="form-control"  formControlName="username"/>
+                  </div>
+              </div>
+              <div  class="row">
+                <div class="col-md-12">
+                    <label class="form-label">{{"users.phone"|translate}}</label>
+                    <app-EgyptPhoneNumberInput style="width: 100%;"  formControlName="phone" />
+                </div>
+            </div>
+            <div style="margin-bottom: 10;" class="row">
+              <div class="col-md-12">
+                
+                <label class="form-label">{{"users.email"|translate}}</label>
+                <input type="email" class="form-control"   formControlName="email" />
+             </div>
+          </div>
+          <!-- <div style="margin-bottom: 10;" class="row">
+            <div class="col-md-12">
+              <label class="form-label">{{"users.password"|translate}}</label>
+              <input type="password" class="form-control"  formControlName="password"  />
+           </div>
+        </div>
+        <div style="margin-bottom: 10;" class="row">
+          <div class="col-md-12">
+            <label class="form-label">{{"users.confirmationPassword"|translate}}</label>
+              <input type="password" class="form-control"  formControlName="confirmationPassword" required/>
+            <small class="text-danger"
+                 *ngIf="userUpdateForm.errors?.['passwordMismatch'] && (confirmPassword.touched && (Password.touched && userUpdateForm.get('password')?.valid))">
+                 {{"users.confirmationPasswordErrorMessage"|translate}} 
+            </small> 
+          
+         </div>
+      </div>-->
+          <div style="margin-bottom: 20px;" class="row">
+            <div class="col-md-12">
+              <div class="row">
+                  <div class="col-md-12">
+                    <label  class="form-label">{{"users.role"|translate}}</label>
+                    <p-dropdown  formControlName="role" [options]="roles" optionLabel="name" optionValue="value"  placeholder="{{'users.rolePlacehoder'|translate}}"></p-dropdown>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+       
+          </form>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn ssc-table-button" data-bs-dismiss="modal">
+          {{"tabel.close"|translate}}
+        </button>
+        <button type="button" [disabled]="!userUpdateForm.valid" class="btn table-button"
+          (click)="onUpdate()"  (keyup.enter)="onUpdate()" data-bs-dismiss="modal">
+          {{"tabel.submit"|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

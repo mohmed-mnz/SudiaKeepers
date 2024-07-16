@@ -1,0 +1,46 @@
+/* toolbar.component.css */
+.mat-toolbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 10vh;
+  }
+  
+  .toolbar-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .toolbar-title {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    color: #000;
+  }
+  
+  .toolbar-title span {
+    margin: 0 10px;
+  }
+  
+  .toolbar-logo img {
+    height: 40px; /* Adjust based on your logo size */
+  }
+
+  .custom-button {
+    height: 5vh;
+   border: 0.05px solid #000 ;
+   border-radius: 10px;
+    color: white; /* Adjust text color as needed */
+  }
+  
+  .custom-button:hover {
+    background-color: #679A5E; /* Adjust hover color as needed */
+  }
+  
+  .spacer {
+    flex: 2 2 auto;
+  }

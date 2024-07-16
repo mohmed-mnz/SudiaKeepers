@@ -1,0 +1,54 @@
+
+
+<div class="container">
+  <div class="form" style="margin: 2rem;">
+    <h2 class="text-center"  style="margin:-15px 0 25px 0  ;" >{{"settings.title"|translate}}</h2>
+    <form [formGroup]="settingsForm">
+      <div class="row">
+        <div class="col-md-5">
+          <label class="form-label">{{"settings.firstHourPrice"|translate}}</label>
+          <input type="number" min="0" class="form-control"   formControlName="firstHourPrice" [ngClass]="{'disabled-field': settingsForm.get('firstHourPrice')?.disabled}"  style="display:inline;width:65%;float: left;"    />
+        </div>
+        <div class="col-md-5">
+          <label class="form-label">{{"settings.remainHourPrice"|translate}}</label>
+          <input type="number" min="0" class="form-control"  formControlName="remainHourPrice" [ngClass]="{'disabled-field': settingsForm.get('firstHourPrice')?.disabled}"  style="display:inline;width:65%;float: left;"   />
+       </div>
+      </div>
+     
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-5">
+          <label class="form-label">{{"settings.finePrice"|translate}}</label>
+          <input  type="number" min="0" class="form-control" formControlName="finePrice" [ngClass]="{'disabled-field': settingsForm.get('firstHourPrice')?.disabled}"  style="display:inline;width:65%;float: left;"    />
+       </div>
+       <div class="col-md-5">
+        <label  class="form-label">{{"settings.dailyPrice"|translate}}</label>
+        <input  type="number" min="0" class="form-control" formControlName="dailyPrice" [ngClass]="{'disabled-field': settingsForm.get('firstHourPrice')?.disabled}" style="display:inline;width:65%;float: left;"  />
+     </div>
+      </div>
+      <div class="row"  style="margin-top: 10px;">
+        <div class="col-md-5">
+          <label class="form-label">{{"settings.hostingTimeMinutes"|translate}}</label>
+          <input  type="number" min="0"class="form-control" formControlName="hostingTimeMinutes" [ngClass]="{'disabled-field': settingsForm.get('firstHourPrice')?.disabled}"  style="display:inline;width:65%;float: left;"    />
+       </div>
+        <div class="col-md-5">
+          <label class="form-label">{{"settings.garageCapacity"|translate}}</label>
+          <input type="number" min="0" formControlName="garageCapacity"  class="form-control" [ngClass]="{'disabled-field': settingsForm.get('firstHourPrice')?.disabled}"  style="display:inline;width:65%;float: left;"    />
+       </div>
+      
+      </div>
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5">
+          <p>
+            {{"settings.breakHour"|translate}}
+            <input  type="checkbox" value="false" formControlName="breakHour">
+          </p>  
+       </div>
+      </div>
+      
+      <button style="float: inline-start;" type="submit" class="prev-button" (click)="restSettings()">{{'button.reset'|translate}}</button>
+      <button  style="float: inline-end;"  [disabled]="!submitCanges" class="prev-button" (click)="submit()"  >{{'button.save'|translate}}</button>
+      <button  style="float: inline-end;"  [disabled]="!submitCanges" class="prev-button" (click)="discard()" >{{'button.discard'|translate}}</button>
+    </form>
+  </div>
+</div>
+
