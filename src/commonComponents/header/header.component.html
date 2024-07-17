@@ -1,17 +1,18 @@
 <mat-toolbar color="primary">
     <div class="toolbar-logo">
-        <img src="path/to/your/logo.png" alt="Logo">
+      <img src="path/to/your/logo.png" alt="Logo">
     </div>
     <div class="toolbar-title">
-      <span> الرُيسية</span>
-      <span> من نحن</span>
-      <span>  أعمالنا</span>
-      <span>  خدمانا</span>
-      <span>  تواصل معنا</span>
-      <span>  مدونة تنسيق الحدائق</span>
+      <span routerLink="/" routerLinkActive="active-link">الرُيسية</span>
+      <span routerLink="/aboutus" routerLinkActive="active-link">من نحن</span>
+      <span routerLink="/ourwork" routerLinkActive="active-link">أعمالنا</span>
+      <span routerLink="/ourservices" routerLinkActive="active-link">خدمانا</span>
+      <span routerLink="/connectwithus" routerLinkActive="active-link">تواصل معنا</span>
+      <span routerLink="/blog" routerLinkActive="active-link">مدونة تنسيق الحدائق</span>
     </div>
     <div class="toolbar-section">
-      <button mat-button class="custom-button" style=" background-color: #74AC6A;"> عرض أسعار</button>
-      <button  mat-button class="custom-button"style=" background-color: #EFCA63;">اتصل بنا</button>
+      <button mat-button class="custom-button" style="background-color: #74AC6A;">عرض أسعار</button>
+      <button mat-button class="custom-button" style="background-color: #EFCA63;">اتصل بنا</button>
     </div>
-    </mat-toolbar>
+  </mat-toolbar>
+  
