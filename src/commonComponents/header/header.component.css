@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0; /* Fix the toolbar to the top of the viewport */
+    top: 50; /* Fix the toolbar to the top of the viewport */
     left: 0;
     right: 0;
     z-index: 1000; /* Ensure it's above other content if necessary */
@@ -53,4 +53,7 @@
     font-weight: bold;
     text-decoration: underline;
   }
-  
+  .header1{
+    background-color: #519745;
+    color: #fff;
+  }
