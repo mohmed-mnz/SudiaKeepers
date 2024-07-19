@@ -1,0 +1,74 @@
+/* Hero Section */
+.hero-section {
+    background: #ffffff; /* White background for a clean look */
+    color: #333333; /* Dark text for contrast */
+    padding: 5rem 0;
+}
+
+
+.hero-content h2 {
+    font-size: 3rem; /* Larger heading for impact */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 80px;
+    height: 5px;
+    background: #27ae60;
+    margin: 1rem 0;
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: #27ae60;
+    border: none;
+    color: #ffffff;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #219150;
+    transform: scale(1.05);
+}
+
+.hero-image {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.shadow-card {
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shadow-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .fa-3x {
+    font-size: 2.5em;
+}
