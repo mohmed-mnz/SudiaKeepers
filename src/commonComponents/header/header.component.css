@@ -1,7 +1,7 @@
 /* toolbar.component.css */
 .mat-toolbar {
     background-color: #fff;
-    display: flex;
+   /* display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -9,16 +9,16 @@
     left: 0;
     right: 0;
     z-index: 1000; /* Ensure it's above other content if necessary */
-    height: 10vh; /* Set the desired height */
-    width: 100%; /* Ensure it spans the full width */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+ /*   height: 10vh; /* Set the desired height */
+   /* width: 100%; /* Ensure it spans the full width */
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Optional: Add a shadow for depth*/
 }
   .toolbar-section {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
   }
-  
+
   .toolbar-title {
     display: flex;
     justify-content: center;
@@ -26,11 +26,11 @@
     text-align: center;
     color: #000;
   }
-  
+
   .toolbar-title span {
     margin: 0 10px;
   }
-  
+
   .toolbar-logo img {
     height: 40px; /* Adjust based on your logo size */
   }
@@ -41,11 +41,11 @@
    border-radius: 10px;
     color: white; /* Adjust text color as needed */
   }
-  
+
   .custom-button:hover {
     background-color: #679A5E; /* Adjust hover color as needed */
   }
-  
+
   .spacer {
     flex: 2 2 auto;
   }

@@ -1,1 +1,121 @@
-<p>main-page works!</p>
+<div class="row container-fluid" style='background-color:#eee'>
+    <div class="col-12">
+      <p-galleria 
+        [value]="images" 
+        [showItemNavigators]="true" 
+        [showThumbnails]="false" 
+        [showIndicators]="true" 
+        [showIndicatorsOnItem]="true" 
+        [autoPlay]="true" 
+        [circular]="true" 
+        [responsiveOptions]="responsiveOptions" 
+        [containerStyle]="{ }">
+        
+        <ng-template pTemplate="item" let-item>
+          <div class="image-container">
+            <img [src]="item.itemImageSrc" style="width:99vw; display: block;" />
+            <div class="centered-text">
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+        </ng-template>
+        
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" style="display: block;" />
+          </div>
+        </ng-template>
+      </p-galleria>
+    </div>
+</div>
+
+<div class="row container-fluid p-5" >
+<div class="col-4">
+    <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>account_balance_wallet</mat-icon>
+          </div>
+          <mat-card-title>أفضل أسعار</mat-card-title>
+          <!-- <mat-card-subtitle>Card Subtitle</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+          <p>تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة
+            العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
+        </mat-card-content>
+      </mat-card>
+      
+</div>
+
+
+<div class="col-4">
+    <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>emoji_events</mat-icon>
+          </div>
+          <mat-card-title>أفضل خدمات</mat-card-title>
+          <!-- <mat-card-subtitle>Card Subtitle</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                لدينا فريق متكامل من المهندسون الزراعيون والفنيين 
+                والعمال المتخصصين بخبرة 10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.
+            </p>
+        </mat-card-content>
+      </mat-card>
+      
+</div>
+
+  
+<div class="col-4">
+    <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>question_answer</mat-icon>
+          </div>
+          <mat-card-title>اختبار قبل التركيب </mat-card-title>
+          <!-- <mat-card-subtitle>Card Subtitle</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل 
+                التركيب لتكوين وجهة نظر شاملة عن الديكور المناسب لحديقتك و تنسيقها.
+            </p>
+        </mat-card-content>
+      </mat-card>
+      
+</div>
+
+</div>
+<div class="counter-container">
+    <div id="counterSection" class="counter-background">
+      <div class="row">
+        <div class="col">
+          <div class="counter-item">
+            <label>المستخدمين</label>
+            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col">
+          <div class="counter-item">
+            <label>المستخدمين</label>
+            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col">
+          <div class="counter-item">
+            <label>المستخدمين</label>
+            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col">
+          <div class="counter-item">
+            <label>المستخدمين</label>
+            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

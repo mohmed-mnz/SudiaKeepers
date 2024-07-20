@@ -1,15 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import '/node_modules/ngx-toastr/toastr.css';
-@import '/node_modules/ngx-spinner/animations/ball-circus.css';
- @import '@angular/material/theming';
- @import "primeng/resources/themes/lara-light-blue/theme.css";
- @import "primeng/resources/primeng.css";
- @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Cairo', "Helvetica Neue", sans-serif;
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+   }
+ body { margin: 0; font-family: 'Cairo', "Helvetica Neue", sans-serif;
+ 
 
-background-color: #ECFFE9;
-}
-
-
-
+ }
+ .p-link {
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 10px;
+  }
+  .bg-light {
+background-color: #fff !important;
+  }
