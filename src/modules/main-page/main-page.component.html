@@ -1,197 +1,288 @@
 <div class="row container-fluid" style='background-color:#eee'>
-    <div class="col-12" style="margin-top:10vh;">
-      <p-galleria 
-        [value]="images" 
-        [showItemNavigators]="true" 
-        [showThumbnails]="false" 
-        [showIndicators]="true" 
-        [showIndicatorsOnItem]="true" 
-        [autoPlay]="true" 
-        [circular]="true" 
-        [responsiveOptions]="responsiveOptions" 
-        [containerStyle]="{ }">
-        
-        <ng-template pTemplate="item" let-item>
-          <div class="image-container">
-            <img [src]="item.itemImageSrc" style="width:99vw; display: block;" />
-            <div class="centered-text">
-              <p>{{item.description}}</p>
-            </div>
-          </div>
-        </ng-template>
-        
-        <ng-template pTemplate="thumbnail" let-item>
-          <div class="grid grid-nogutter justify-content-center">
-            <img [src]="item.thumbnailImageSrc" style="display: block;" />
-          </div>
-        </ng-template>
-      </p-galleria>
-    </div>
-</div>
-
-<div class="row container-fluid p-5 section1" >
-<div class="col-4">
-    <mat-card class="mycard">
-        <mat-card-header>
-          <div mat-card-avatar class="header-icon">
-            <mat-icon>account_balance_wallet</mat-icon>
-          </div>
-          <mat-card-title>أفضل أسعار</mat-card-title>
-          <!-- <mat-card-subtitle>Card Subtitle</mat-card-subtitle> -->
-        </mat-card-header>
-        <mat-card-content>
-          <p>تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة
-            العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
-        </mat-card-content>
-      </mat-card>
+  <div class="col-12" style="margin-top:10vh;">
+    <p-galleria 
+      [value]="images" 
+      [showItemNavigators]="true" 
+      [showThumbnails]="false" 
+      [showIndicators]="true" 
+      [showIndicatorsOnItem]="true" 
+      [autoPlay]="true" 
+      [circular]="true" 
+      [responsiveOptions]="responsiveOptions" 
+      [containerStyle]="{ }">
       
-</div>
-
-
-<div class="col-4">
-    <mat-card class="mycard">
-        <mat-card-header>
-          <div mat-card-avatar class="header-icon">
-            <mat-icon>emoji_events</mat-icon>
+      <ng-template pTemplate="item" let-item>
+        <div class="image-container">
+          <img [src]="item.itemImageSrc" style="width:99vw; display: block;" />
+          <div class="centered-text">
+            <p>{{item.description}}</p>
           </div>
-          <mat-card-title>أفضل خدمات</mat-card-title>
-          <!-- <mat-card-subtitle>Card Subtitle</mat-card-subtitle> -->
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                لدينا فريق متكامل من المهندسون الزراعيون والفنيين 
-                والعمال المتخصصين بخبرة 10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.
-            </p>
-        </mat-card-content>
-      </mat-card>
+        </div>
+      </ng-template>
       
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
 </div>
-
-  
-<div class="col-4">
+<div class="row container-fluid p-5 section1">
+  <div class="col-md-4 col-sm-12">
     <mat-card class="mycard">
-        <mat-card-header>
-          <div mat-card-avatar class="header-icon">
-            <mat-icon>question_answer</mat-icon>
-          </div>
-          <mat-card-title>اختبار قبل التركيب </mat-card-title>
-          <!-- <mat-card-subtitle>Card Subtitle</mat-card-subtitle> -->
-        </mat-card-header>
-        <mat-card-content>
-            <p>
-                تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل 
-                التركيب لتكوين وجهة نظر شاملة عن الديكور المناسب لحديقتك و تنسيقها.
-            </p>
-        </mat-card-content>
-      </mat-card>
-      
+      <mat-card-header>
+        <div mat-card-avatar class="header-icon">
+          <mat-icon>account_balance_wallet</mat-icon>
+        </div>
+        <mat-card-title>أفضل أسعار</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <mat-card class="mycard">
+      <mat-card-header>
+        <div mat-card-avatar class="header-icon">
+          <mat-icon>emoji_events</mat-icon>
+        </div>
+        <mat-card-title>أفضل خدمات</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>لدينا فريق متكامل من المهندسون الزراعيون والفنيين والعمال المتخصصين بخبرة 10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <mat-card class="mycard">
+      <mat-card-header>
+        <div mat-card-avatar class="header-icon">
+          <mat-icon>question_answer</mat-icon>
+        </div>
+        <mat-card-title>اختبار قبل التركيب</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل التركيب لتكوين وجهة نظر شاملة عن الديكور المناسب لحديقتك و تنسيقها.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
 
 <div class="counter-container">
-    <div id="counterSection" class="counter-background">
-      <div class="row">
-        <div class="col">
-          <div class="counter-item">
-            <label>المستخدمين</label>
-            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
-          </div>
+  <div id="counterSection" class="counter-background">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="counter-item">
+          <label>المستخدمين</label>
+          <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
-        <div class="col">
-          <div class="counter-item">
-            <label>المستخدمين</label>
-            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
-          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="counter-item">
+          <label>المستخدمين</label>
+          <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
-        <div class="col">
-          <div class="counter-item">
-            <label>المستخدمين</label>
-            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
-          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="counter-item">
+          <label>المستخدمين</label>
+          <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
-        <div class="col">
-          <div class="counter-item">
-            <label>المستخدمين</label>
-            <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
-          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="counter-item">
+          <label>المستخدمين</label>
+          <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
     </div>
   </div>
 </div>
-  
-<div class="  container-fluid p-5 services-section"style='background-color:#eee'>
-<div class="row">
-  <div class="col-3"></div>
-  <div class="col-6 text-center ">
-    <h1 style="color: rgb(75, 158, 61);;"> خدماتنا</h1>
 
-
-  <p >
-    لدينا مجموعة متنوعة من خدمات تنسيق حدائق وانشاء وتصميم الشلالات وبناء وتركيب 
-    النوافير وتركيب المظلات وثيل طبيعي ومسطحات خضراء وتركيب ثيل صناعي بانواعه وتركيب وتوريد العشب الجداري وتزيين الاشجار وزرع النخل والشتلات وتركيب شبكات ري وتركيب حجر عشوائي وممرات وتصاميم مخططات لاند سكيب و مقاولات عامة بأقل سعر وأعلى جودة في المملكة العربية
-     السعودية.
-  </p>
-  </div>
-  <div class="col-3"></div>
-</div>
-
+<div class="container-fluid p-5 services-section" style='background-color:#eee'>
   <div class="row">
-    <div class="col-4">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+      <h1 style="color: rgb(75, 158, 61);">خدماتنا</h1>
+      <p>لدينا مجموعة متنوعة من خدمات تنسيق حدائق وانشاء وتصميم الشلالات وبناء وتركيب النوافير وتركيب المظلات وثيل طبيعي ومسطحات خضراء وتركيب ثيل صناعي بانواعه وتركيب وتوريد العشب الجداري وتزيين الاشجار وزرع النخل والشتلات وتركيب شبكات ري وتركيب حجر عشوائي وممرات وتصاميم مخططات لاند سكيب و مقاولات عامة بأقل سعر وأعلى جودة في المملكة العربية السعودية.</p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
       <mat-card class="mycard">
         <mat-card-header>
-          <img src="../../assets/1.jpg" alt="My Image" class="header-image">
+          <img src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
         </mat-card-header>
-        
-        <mat-card-content> 
-        
+        <mat-card-content>
           <mat-card-title class="center-title"><h2>تصميم وتنسيق حدائق</h2></mat-card-title>
           <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
-    
         </mat-card-content>
-        
       </mat-card>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-sm-12">
       <mat-card class="mycard">
         <mat-card-header>
           <img src="../../assets/خدمة-توريد-وتركيب-عشب-ثيل-صناعي-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
         </mat-card-header>
-        
-        <mat-card-content> 
-        
+        <mat-card-content>
           <mat-card-title class="center-title"><h3>تصميم وتنسيق حدائق</h3></mat-card-title>
           <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
-    
         </mat-card-content>
-        
       </mat-card>
-  </div>
-  <div class="col-4">
-    <mat-card class="mycard">
-      <mat-card-header>
-        <img src="../../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
-      </mat-card-header>
-      
-      <mat-card-content> 
-      
-        <mat-card-title class="center-title"><h3>تركيب عشب (ثيل) طبيعي</h3></mat-card-title>
-        <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
-  
-      </mat-card-content>
-      
-    </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <img src="../../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title class="center-title"><h3>تركيب عشب (ثيل) طبيعي</h3></mat-card-title>
+          <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>
 
+<div class="container-fluid p-5 services-section" style='background-color:#eee'>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+      <h1 style="color: rgb(75, 158, 61);">خدماتنا</h1>
+      <p>لدينا مجموعة متنوعة من خدمات تنسيق حدائق وانشاء وتصميم الشلالات وبناء وتركيب النوافير وتركيب المظلات وثيل طبيعي ومسطحات خضراء وتركيب ثيل صناعي بانواعه وتركيب وتوريد العشب الجداري وتزيين الاشجار وزرع النخل والشتلات وتركيب شبكات ري وتركيب حجر عشوائي وممرات وتصاميم مخططات لاند سكيب و مقاولات عامة بأقل سعر وأعلى جودة في المملكة العربية السعودية.</p>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <img src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title class="center-title"><h2>تصميم وتنسيق حدائق</h2></mat-card-title>
+          <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <img src="../../assets/خدمة-توريد-وتركيب-عشب-ثيل-صناعي-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title class="center-title"><h3>تصميم وتنسيق حدائق</h3></mat-card-title>
+          <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <img src="../../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" alt="My Image" class="header-image">
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title class="center-title"><h3>تركيب عشب (ثيل) طبيعي</h3></mat-card-title>
+          <p>نقوم بعمل تصميم وتنسيق وصيانة جميع أنواع الحدائق سواء الحدائق المنزلية الصغيرة أو الكبيرة وكذلك الحدائق على أسطح المنازل. كما نقوم بتنسيق وصيانة الحدائق العامة. ونوفر للعميل أفضل أفكار تزيين الحدائق واختبار تصميم الحدائق قبل التركيب بأحدث الوسائل والأجهزة</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>
 
+<div class="container-fluid p-5 section2">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>account_balance_wallet</mat-icon>
+          </div>
+          <mat-card-title>أفضل أسعار</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>emoji_events</mat-icon>
+          </div>
+          <mat-card-title>أفضل خدمات</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>لدينا فريق متكامل من المهندسون الزراعيون والفنيين والعمال المتخصصين بخبرة 10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>question_answer</mat-icon>
+          </div>
+          <mat-card-title>اختبار قبل التركيب</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل التركيب لتكوين وجهة نظر شاملة عن الديكور المناسب لحديقتك و تنسيقها.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
 
-
-
-  
+<div class="container-fluid p-5 section3">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>account_balance_wallet</mat-icon>
+          </div>
+          <mat-card-title>أفضل أسعار</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>emoji_events</mat-icon>
+          </div>
+          <mat-card-title>أفضل خدمات</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>لدينا فريق متكامل من المهندسون الزراعيون والفنيين والعمال المتخصصين بخبرة 10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card class="mycard">
+        <mat-card-header>
+          <div mat-card-avatar class="header-icon">
+            <mat-icon>question_answer</mat-icon>
+          </div>
+          <mat-card-title>اختبار قبل التركيب</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل التركيب لتكوين وجهة نظر شاملة عن الديكور المناسب لحديقتك و تنسيقها.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
 <div class="  container-fluid p-5 services-section"style='background-color:#eee'>
   <div class="row">
-    <div class="col-3"></div>
+    <div class="col-md-3 col-sm-12"></div>
     <div class="col-6 text-center ">
       <h1 style="color: rgb(75, 158, 61);;"> أعمالنا</h1>
   
@@ -204,11 +295,11 @@
       قمنا بتصميم وتركيب أفضل المظلات والسواتر والبرجولات بكافة أنواعها، إلخ.
     </p>
     </div>
-    <div class="col-3"></div>
+    <div class="col-md-3 col-sm-12"></div>
   </div>
   
     <div class="row p-5" >
-      <div class="col-4">
+      <div class="col-md-4 col-sm-12">
         <p-image 
         src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
         [preview]="true" 
@@ -219,7 +310,7 @@
             </ng-template>
     </p-image>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-sm-12">
         <p-image 
         src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
         [preview]="true" 
@@ -230,7 +321,7 @@
             </ng-template>
     </p-image>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-sm-12">
         <p-image 
         src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
         [preview]="true" 
@@ -243,7 +334,7 @@
       </div>
   </div>
   <div class="row p-5">
-    <div class="col-4">
+    <div class="col-md-4 col-sm-12">
       <p-image 
       src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
       [preview]="true" 
@@ -254,7 +345,7 @@
           </ng-template>
   </p-image>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-sm-12">
       <p-image 
       src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
       [preview]="true" 
@@ -265,7 +356,7 @@
           </ng-template>
   </p-image>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-sm-12">
       <p-image 
       src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
       [preview]="true" 
@@ -283,7 +374,7 @@
 
   <div class="row p-5 customeropinion">
     <div class="row">
-      <div class="col-3"></div>
+      <div class="col-md-3 col-sm-12"></div>
       <div class="col-6 text-center ">
         <h1  > اراء العملاء</h1>
         <p >
@@ -291,7 +382,7 @@
          سعداء بالخدمة ويوصون بنا لجيرانهم وأقاربهم.
       </p>
       </div>
-      <div class="col-3"></div>
+      <div class="col-md-3 col-sm-12"></div>
     </div>
   <div class="row ">
    <div class="col">
