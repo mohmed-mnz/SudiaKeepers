@@ -21,6 +21,14 @@ html, body {
   .bg-light {
 background-color: #fff !important;
   }
+  a{
+    cursor: pointer;
+  }
   .active-link{
     text-decoration:underline  rgb(75, 158, 61) !important;
+   
+  }
+
+  .link{
+    cursor: pointer;
   }
