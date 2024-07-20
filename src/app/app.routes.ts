@@ -11,7 +11,7 @@ export const routes: Routes = [
     {
       path: '', component: MainLayoutComponent,
       children: [
-        { path: '', component: MainPageComponent, pathMatch: 'full' },
+        { path: 'home', component: MainPageComponent, pathMatch: 'full' },
         { path: 'aboutus', component: AboutUsComponent, pathMatch: 'full' },
         { path: 'blog', component: BlogComponent, pathMatch: 'full' },
         { path: 'connectwithus', component: ConnectWithUsComponent, pathMatch: 'full' },
