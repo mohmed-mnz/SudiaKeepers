@@ -1,27 +1,51 @@
-/* Hero Section */
-.hero-section {
-    background: #ffffff; /* White background for a clean look */
-    color: #333333; /* Dark text for contrast */
-    padding: 5rem 0;
+
+/*First Section*/
+.hero-section1 {
+    position: relative;
+    height: 50vh;
+    background: url('../../assets/5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
 }
 
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.656);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
 
-.hero-content h2 {
-    font-size: 3rem; /* Larger heading for impact */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: bolder;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    font-family: 'Cairo', sans-serif;
 }
 
-.divider {
-    width: 80px;
-    height: 5px;
-    background: #27ae60;
-    margin: 1rem 0;
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
 }
 
-.hero-content p {
+.hero-description {
     font-size: 1.125rem;
     line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 .btn-primary {
@@ -39,23 +63,146 @@
     transform: scale(1.05);
 }
 
-.hero-image {
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+.hero-section1:hover .hero-overlay {
+    background: rgba(0, 0, 0, 0.33);
+}
+
+
+
+/*second section*/
+
+.hero-section {
+    background: #94929200;
+    color: #333333;
+    padding: 6rem 1rem;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 80px;
+    height: 5px;
+    background: #27ae60;
+    margin: 1rem 0;
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #66bb6a;
+    color: #ffffff;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.7s ease-in-out, transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    gap: 0.75rem;
+    font-weight: 600;
+    font-family: 'Cairo', sans-serif;
+}
+
+.btn:hover {
+    background-color: #43a047;
+    transform: scale(1.1) ;
+    transition: ease-in-out 0.8s ;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.btn i {
+    font-size: 1.6rem;
+}
+
+.btn span {
+    font-size: 1.125rem;
+}
+
+.btn:focus, .btn:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-image-wrapper {
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
 }
 
-.hero-image:hover {
-    transform: scale(1.05);
-}
-
-.hero-image img {
+.hero-image {
     width: 100%;
     height: auto;
+    display: block;
 }
 
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 169, 48, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+.hero-image-wrapper:hover .hero-image-overlay {
+    opacity: 0.5;
+}
+
+
+/*the third section**/
 .shadow-card {
     border: none;
     border-radius: 12px;
@@ -71,4 +218,91 @@
 
 .feature-card .fa-3x {
     font-size: 2.5em;
+}
+.feature-card {
+    border: none;
+    background-color: #fff;
+}
+.shadow-card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.hero-section .divider {
+    height: 0.25rem;
+    width: 3rem;
+    background-color: #000;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+/* last section */
+.steps-section {
+    position: relative;
+    background: url('../../assets/3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.steps-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    transition: background-color 0.7s ease-in-out;
+}
+
+.steps-section:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.steps-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.step-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.step-icon {
+    color: #27ae60;
+}
+
+.call-btn {
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+    background-color: #1e8449;
+    color: #ffffff;
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
+.text-off-white {
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .step-card {
+        margin-bottom: 20px;
+    }
 }
