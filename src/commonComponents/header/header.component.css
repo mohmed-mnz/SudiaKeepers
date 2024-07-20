@@ -1,0 +1,62 @@
+/* toolbar.component.css */
+.mat-toolbar {
+  background-color: rgba(255, 255, 255, 0.9); 
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 50; /* Fix the toolbar to the top of the viewport*/
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above other content if necessary */
+   height: 10vh; /* Set the desired height
+   /* width: 100%; /* Ensure it spans the full width */
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Optional: Add a shadow for depth*/
+}
+  .toolbar-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .toolbar-title {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    color: #000;
+  }
+
+  .toolbar-title span {
+    margin: 0 10px;
+  }
+
+  .toolbar-logo img {
+    height: 40px; /* Adjust based on your logo size */
+  }
+
+  .custom-button {
+    height: 5vh;
+   border: 0.05px solid #000 ;
+   border-radius: 10px;
+    color: white; /* Adjust text color as needed */
+  }
+
+  .custom-button:hover {
+    background-color: #679A5E; /* Adjust hover color as needed */
+  }
+
+  .spacer {
+    flex: 2 2 auto;
+  }
+  .active-link {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .header1{
+    background-color: #519745;
+    color: #fff;
+  }
+  span{
+    cursor: pointer;
+  }
