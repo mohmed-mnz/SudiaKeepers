@@ -57,3 +57,6 @@
     background-color: #519745;
     color: #fff;
   }
+  span{
+    cursor: pointer;
+  }
