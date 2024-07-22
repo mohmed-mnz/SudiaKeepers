@@ -8,16 +8,16 @@ import { OurServicesComponent } from '../modules/our-services/our-services.compo
 import { OurWorkComponent } from '../modules/our-work/our-work.component';
 
 export const routes: Routes = [
-    {
-      path: '', component: MainLayoutComponent,
-      children: [
-        { path: '', component: MainPageComponent, pathMatch: 'full' },
-        { path: 'aboutus', component: AboutUsComponent, pathMatch: 'full' },
-        { path: 'blog', component: BlogComponent, pathMatch: 'full' },
-        { path: 'connectwithus', component: ConnectWithUsComponent, pathMatch: 'full' },
-        { path: 'ourservices', component: OurServicesComponent, pathMatch: 'full' },
-        { path: 'ourwork', component: OurWorkComponent, pathMatch: 'full' },
-      ]
-    }
+  {
+    path: '', component: MainLayoutComponent,
+    children: [
+      { path: '', component: MainPageComponent, pathMatch: 'full' },
+      { path: 'aboutus', component: AboutUsComponent },
+      { path: 'blog', component: BlogComponent },
+      { path: 'connectwithus', component: ConnectWithUsComponent },
+      { path: 'ourservices', component: OurServicesComponent },
+      { path: 'ourwork', component: OurWorkComponent },
+    ]
+  }
   ];
   

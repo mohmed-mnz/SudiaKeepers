@@ -1,4 +1,258 @@
-<div class="row container-fluid" style='background-color:#eee'>
+<div class="container-fluid" style="background-color:#eee; padding: 0;">
+  <div style="margin-top: 10vh;">
+    <p-galleria
+      [value]="images" 
+      [showItemNavigators]="true" 
+      [showThumbnails]="false" 
+      [showIndicators]="true" 
+      [showIndicatorsOnItem]="true" 
+      [autoPlay]="true" 
+      [circular]="true" 
+      [responsiveOptions]="responsiveOptions" 
+      [containerStyle]="{ 'width': '100%' }">
+      <ng-template pTemplate="item" let-item>
+        <div class="galleria-item">
+          <img [src]="item.itemImageSrc"/>
+          <div class="centered-text">
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+</div>
+<div class="container ">
+  <div class="row">
+  <div class="col-md-4 col-sm-12">
+    <mat-card class="mycard">
+      <mat-card-header>
+        <div mat-card-avatar class="header-icon">
+          <mat-icon>account_balance_wallet</mat-icon>
+        </div>
+        <mat-card-title>أفضل أسعار</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <mat-card class="mycard">
+      <mat-card-header>
+        <div mat-card-avatar class="header-icon">
+          <mat-icon>emoji_events</mat-icon>
+        </div>
+        <mat-card-title>أفضل خدمات</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>لدينا فريق متكامل من المهندسون الزراعيون والفنيين والعمال المتخصصين بخبرة 10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <mat-card class="mycard">
+      <mat-card-header>
+        <div mat-card-avatar class="header-icon">
+          <mat-icon>question_answer</mat-icon>
+        </div>
+        <mat-card-title>اختبار قبل التركيب</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل التركيب لتكوين وجهة نظر شاملة عن الديكور المناسب لحديقتك و تنسيقها.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+</div>
+
+<section class="hero-section ">
+  <div class="container">
+      <div class="row gx-4 align-items-center">
+          <!-- Hero Content -->
+          <div class="col-md-6 order-2 order-md-1 hero-content">
+              <h2 class="display-4 fw-bold text-dark mb-4">الخبراء في تصميم وتنسيق الحدائق الفاخرة في السعودية</h2>
+              <div class="divider mb-4"></div>
+              <p class="lead text-dark mb-4">
+                  <strong>شركة بستان الخليج</strong> تقدم لك تجربة فريدة في تنسيق الحدائق، مع اهتمام بالتفاصيل وتصميمات مبتكرة تضفي جمالاً وفخامة على كل مساحة. من تصميم الحدائق الخاصة إلى إنشاء المساحات العامة الخلابة، نحن نضفي لمسة من الإبداع والاحترافية على كل مشروع.
+              </p>
+              <p class="lead text-dark mb-4">
+                  تميزنا في تركيب نوافير وشلالات تضفي لمسة من الرفاهية، بالإضافة إلى تقديم خدمات التصميم والإشراف على أعمال الصيانة بشكل دوري لضمان استدامة وجمال المساحات الخارجية. نحن هنا لنحول رؤيتك إلى واقع ملموس يبهج العين ويستمتع به كل من يراه.
+              </p>
+              <p class="text-dark mb-4">
+                  انضم إلى قائمة عملائنا الراضين واستمتع بخدمة متكاملة وفريق متخصص يضمن لك تحقيق أعلى مستويات الجودة والإبداع في كل مشروع. <strong>شركة بستان الخليج</strong> هي اختيارك المثالي لتحويل المساحات الخارجية إلى أماكن مريحة وجميلة.
+              </p>
+              <a class="btn call-btn" href="tel:+966533927072">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>اتصل بنا: +966 53 392 7072</span>
+              </a>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="col-md-6 order-1 order-md-2">
+              <div class="hero-image-wrapper">
+                  <img class="img-fluid hero-image" src="https://abshirgardening.com/wp-content/uploads/2020/10/أبشر-أفضل-شركة-تنسيق-حدائق-في-المملكة-العربية-السعودية.jpg" alt="تنسيق حدائق فاخرة في السعودية">
+                  <div class="hero-image-overlay"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+  <div class="counter-container">
+    <div id="counterSection" class="counter-background">
+      <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label>مظلات وبرجولات</label>
+            <app-mycounter style="color: #eee;" [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label>نوافير وشلالات</label>
+            <app-mycounter style="color: #eee;" [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label>طلبات توريد</label>
+           <app-mycounter style="color: #eee;" [end]="700" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label>تركيبات عشب صناعى</label>
+           <app-mycounter style="color: #eee;" [end]="500" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label> تركيب عشب جدارى</label>
+            <app-mycounter style="color: #eee;" [end]="300" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label> ديكورات صناعية</label>
+            <app-mycounter style="color: #eee;" [end]="800" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label> تركيب شبكات رى</label>
+           <app-mycounter style="color: #eee;" [end]="400" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-item">
+            <label>  زراعة نخيل</label>
+           <app-mycounter style="color: #eee;" [end]="200" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="container">
+  <div class="  container-fluid p-5 services-section"style='background-color:#eee'>
+    <div class="row">
+      <div class="col-md-3 col-sm-12"></div>
+      <div class="col-6 text-center ">
+        <h1 style="color: rgb(75, 158, 61);;"> أعمالنا</h1>
+    
+    
+      <p >
+        بخبرة أكثر من 10 أعوام في مجال تنسيق الحدائق، تمكنت شركة بستان الخليج لتنسيق الحدائق في السعودية من القيام بما يتعدى اجمالي 1000 مشروع وعميل. قُمنا بمشاريع تنسيق
+         حدائق في كل أرجاء المملكة العربية السعودية (الرياض – جدة – المدينة المنورة – مكة
+         المكرمة – الاحساء – الدمام – الطائف – بريدة – أبها – نجران – إلخ). قمنا بمشاريع تنسيق 
+        حدائق للمنازل والفلل والقصور، ومشاريع العشب الطبيعي والصناعي والجداري. كما 
+        قمنا بتصميم وتركيب أفضل المظلات والسواتر والبرجولات بكافة أنواعها، إلخ.
+      </p>
+      </div>
+      <div class="col-md-3 col-sm-12"></div>
+    </div>
+    
+      <div class="row p-5" >
+        <div class="col-md-4 col-sm-12">
+          <p-image 
+          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
+          [preview]="true" 
+          alt="Image" 
+          width="100%">
+              <ng-template pTemplate="indicator">
+                  <i class="pi pi-check"></i>
+              </ng-template>
+      </p-image>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <p-image 
+          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
+          [preview]="true" 
+          alt="Image" 
+          width="100%">
+              <ng-template pTemplate="indicator">
+                  <i class="pi pi-check"></i>
+              </ng-template>
+      </p-image>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <p-image 
+          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
+          [preview]="true" 
+          alt="Image" 
+          width="100%">
+              <ng-template pTemplate="indicator">
+                  <i class="pi pi-check"></i>
+              </ng-template>
+      </p-image>
+        </div>
+    </div>
+    <div class="row p-5">
+      <div class="col-md-4 col-sm-12">
+        <p-image 
+        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
+        [preview]="true" 
+        alt="Image" 
+        width="100%">
+            <ng-template pTemplate="indicator">
+                <i class="pi pi-check"></i>
+            </ng-template>
+    </p-image>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <p-image 
+        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
+        [preview]="true" 
+        alt="Image" 
+        width="100%">
+            <ng-template pTemplate="indicator">
+                <i class="pi pi-check"></i>
+            </ng-template>
+    </p-image>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <p-image 
+        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
+        [preview]="true" 
+        alt="Image" 
+        width="100%">
+            <ng-template pTemplate="indicator">
+                <i class="pi pi-check"></i>
+            </ng-template>
+    </p-image>
+      </div>
+  </div>
+    </div>
+    
+  
+</div>
+<!-- <div class="row container-fluid" style='background-color:#eee'>
   <div class="col-12" style="margin-top:10vh;">
     <p-galleria 
       [value]="images" 
@@ -76,7 +330,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
           <label>المستخدمين</label>
-          <app-mycounter [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
+         <app-mycounter style="color: #eee;" [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
@@ -408,4 +662,4 @@
     
     
   
-  </div>
+  </div> -->

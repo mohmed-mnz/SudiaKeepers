@@ -9,9 +9,7 @@
     left: 0;
     right: 0;
     z-index: 1000; /* Ensure it's above other content if necessary */
-   height: 10vh; /* Set the desired height
-   /* width: 100%; /* Ensure it spans the full width */
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Optional: Add a shadow for depth*/
+ 
 }
   .toolbar-section {
     display: flex;
