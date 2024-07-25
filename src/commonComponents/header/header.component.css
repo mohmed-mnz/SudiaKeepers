@@ -82,3 +82,20 @@
 
 
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-width: 100px;
+  max-height: 100px;
+  transition: max-width 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+}
+
+.scrolled .navbar-brand img {
+  max-width: 120px;
+  max-height: 120px;
+  transform: scale(1.1);
+  overflow: hidden;
+}
