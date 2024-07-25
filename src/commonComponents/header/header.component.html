@@ -1,22 +1,51 @@
-<div class="container">
-  <mat-toolbar class="custom-toolbar" color="primary">
-    <div class="toolbar-logo">
-      <!-- <img src="https://abshirgardening.com/wp-content/uploads/2020/10/أبشر-لوجو-بالعرض.png" 
-           alt="أبشر لتنسيق الحدائق"> -->
-      <img src="./../assets/4967945610397330820.jpg"  
-           alt="أبشر لتنسيق الحدائق">
+
+
+<!-- <div class="row header1">
+    <div class="col-1"></div>
+    <div class="col-5">
+      <strong>أفضل شركة تنسيق حدائق في المملكة العربية السعودية</strong>
     </div>
-    <div class="toolbar-title">
-      <span routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">الرئيسية</span>
-      <span routerLink="/aboutus" routerLinkActive="active-link">من نحن</span>
-      <span routerLink="/ourwork" routerLinkActive="active-link">أعمالنا</span>
-      <span routerLink="/ourservices" routerLinkActive="active-link">خدمانا</span>
-      <span routerLink="/connectwithus" routerLinkActive="active-link">تواصل معنا</span>
-      <span routerLink="/blog" routerLinkActive="active-link">مدونة تنسيق الحدائق</span>
+    <div class="col-2">
+      <span>
+        راسلنا عبر البريد الإلكتروني			       </span>
     </div>
-    <div class="toolbar-section">
-      <button class="btn btn-primary mt-1" style="background-color: #D9881D;">عرض أسعار</button>
-      <button class="btn btn-primary mt-1" >      اتصل بنا الآن  </button>
+    <div class="col-1">
+      <span>+966530599634</span>
     </div>
-  </mat-toolbar>
-</div>
+  </div> -->
+  <nav class="navbar navbar-expand-lg navbar-light hero-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">
+        <img src="./../assets/206.png" class="header_logo" alt="بستان الخليج لتنسيق الحدائق">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/aboutus" routerLinkActive="active-link">من نحن</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ourwork" routerLinkActive="active-link">أعمالنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ourservices" routerLinkActive="active-link">خدماتنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/connectwithus" routerLinkActive="active-link">تواصل معنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blog" routerLinkActive="active-link">مدونة تنسيق الحدائق</a>
+          </li>
+        </ul>
+        <div class="navbar-buttons d-flex">
+          <button class="btn custom-button primary-button">عرض أسعار</button>
+          <button class="btn custom-button secondary-button">اتصل بنا</button>
+        </div>
+      </div>
+    </div>
+  </nav>
