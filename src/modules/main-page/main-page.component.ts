@@ -47,7 +47,7 @@ export class MainPageComponent implements OnInit {
         { itemImageSrc: 'assets/image-3-1024x504.jpg', alt: 'Image 2', title: 'Title 2', description: ' تميزنا في تركيب نوافير وشلالات تضفي لمسة من الرفاهية، بالإضافة إلى تقديم خدمات التصميم والإشراف على أعمال الصيانة بشكل دوري لضمان استدامة وجمال المساحات الخارجية. نحن هنا لنحول رؤيتك إلى واقع ملموس يبهج العين ويستمتع به كل من يراه.' },
         { itemImageSrc: 'assets/Untitled-1-1024x576.jpg', alt: 'Image 3', title: 'Title 3', description: '   انضم إلى قائمة عملائنا الراضين واستمتع بخدمة متكاملة وفريق متخصص يضمن لك تحقيق أعلى مستويات الجودة والإبداع في كل مشروع.' }
     ];
-    
+
     this.paragraphs = [
       'Paragraph 1 content...',
       'Paragraph 2 content...',
