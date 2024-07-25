@@ -21,6 +21,21 @@ html, body {
   .bg-light {
 background-color: #fff !important;
   }
-  .active-link{
-    text-decoration:underline  rgb(75, 158, 61) !important;
+  a{
+    cursor: pointer;
+  }
+  .active-link {
+    padding-top: 2px; /* Adjusts the spacing between the text and underline */
+    text-decoration: underline; /* Sets the text decoration to underline */
+    text-decoration-color: rgb(75, 158, 61); /* Sets the color of the underline */
+    text-decoration-thickness: 2px; /* Sets the thickness of the underline */
+  }
+  
+  
+  .link{
+    cursor: pointer;
+  }
+
+  .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators{
+    background-color:transparent;
   }

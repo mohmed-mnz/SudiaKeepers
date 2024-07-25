@@ -1,0 +1,18 @@
+.counter-container {
+    background-color:#ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styles for the background of the counter section */
+  .counter-background {
+    background: url('../../assets/counter_bg7.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  a{
+    color: #fff;
+  }
