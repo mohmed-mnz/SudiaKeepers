@@ -2,7 +2,7 @@
 .hero-section1 {
     position: relative;
     height: 50vh;
-    background: url('../../assets/5.jpg') no-repeat center center fixed;
+    background: url('../../assets/7.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -80,3 +80,135 @@
     background: rgba(0, 0, 0, 0.33);
 }
 
+
+
+
+/*second section*/
+.contact-us-section {
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.contact-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 500px;
+}
+
+.card, .info-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Cairo';
+
+}
+
+.card-title, .info-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+font-family: 'Cairo';
+}
+
+.card-description, .info-description {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Cairo';
+}
+
+.form-control {
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    line-height: 1.4;
+    font-family: 'Cairo';
+
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.info-buttons .btn {
+    background-color: #28a745;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 5px;
+    line-height: 1.4;
+}
+.info-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Cairo';
+
+}
+
+.info-buttons .btn i {
+    font-size: 1.5rem;
+}
+
+
+.info-buttons .btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        right: 5%;
+        padding: 10px;
+    }
+    .card-title, .info-title {
+        font-size: 2rem;
+    }
+    .card-description, .info-description {
+        font-size: 1.2rem;
+    }
+    .form-control, .btn-primary, .info-buttons .btn {
+        font-size: 1.2rem;
+    }
+}
