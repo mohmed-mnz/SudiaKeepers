@@ -1,60 +1,84 @@
 /* toolbar.component.css */
-.mat-toolbar {
+.custom-toolbar {
   background-color: rgba(255, 255, 255, 0.9); 
-   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 50; /* Fix the toolbar to the top of the viewport*/
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Ensure it's above other content if necessary */
- 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0; /* Fix the toolbar to the top of the viewport */
+  left: 0;
+  right: 0;
+  padding: 0 20vw;
+  z-index: 1000; /* Ensure it's above other content if necessary */
+   font-family: 'Cairo';
 }
-  .toolbar-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
 
-  .toolbar-title {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    text-align: center;
-    color: #000;
-  }
+.toolbar-logo img {
+  height: 10vh; /* Adjust based on your logo size */
+}
 
-  .toolbar-title span {
-    margin: 0 10px;
-  }
+.toolbar-title {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  color: #000;
+}
 
-  .toolbar-logo img {
-    height: 40px; /* Adjust based on your logo size */
-  }
+.toolbar-title span {
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
 
-  .custom-button {
-    height: 5vh;
-   border: 0.05px solid #000 ;
-   border-radius: 10px;
-    color: white; /* Adjust text color as needed */
-  }
+.toolbar-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: green;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
 
-  .custom-button:hover {
-    background-color: #679A5E; /* Adjust hover color as needed */
-  }
+.toolbar-title span:hover::after,
+.toolbar-title .active-link::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
-  .spacer {
-    flex: 2 2 auto;
-  }
-  .active-link {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  .header1{
-    background-color: #519745;
-    color: #fff;
-  }
-  span{
-    cursor: pointer;
-  }
+.toolbar-title .active-link {
+  color: #74AC6A; /* Adjust the color of the active link */
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-button {
+  height: 5vh;
+  border: 0.05px solid #000;
+  border-radius: 10px;
+  color: white; /* Adjust text color as needed */
+}
+
+.quote-button {
+  background-color: #74AC6A;
+}
+
+.contact-button {
+  background-color: #EFCA63;
+}
+
+.custom-button:hover {
+  opacity: 0.8; /* Add hover effect */
+}
+
+
+

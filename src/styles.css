@@ -2,10 +2,28 @@ html, body {
     height: 100%;
     scroll-behavior: smooth;
    }
- body { margin: 0; font-family: 'Cairo', "Helvetica Neue", sans-serif;
- 
+ body {
+   margin: 0;
+    font-family: 'Cairo', 
+    "Helvetica Neue", sans-serif;
+ background-color: #eee;
 
  }
+
+ .btn-primary {
+  background-color: #27ae60;
+  border: none;
+  color: #ffffff;
+  font-size: 1.125rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #219150;
+  transform: scale(1.05);
+}
+
  .p-link {
     text-align: left;
     cursor: pointer;
@@ -24,14 +42,7 @@ background-color: #fff !important;
   a{
     cursor: pointer;
   }
-  .active-link {
-    padding-top: 2px; /* Adjusts the spacing between the text and underline */
-    text-decoration: underline; /* Sets the text decoration to underline */
-    text-decoration-color: rgb(75, 158, 61); /* Sets the color of the underline */
-    text-decoration-thickness: 2px; /* Sets the thickness of the underline */
-  }
-  
-  
+
   .link{
     cursor: pointer;
   }
