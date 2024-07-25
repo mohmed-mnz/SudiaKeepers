@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { RouterModule, Routes } from '@angular/router';
+import { Component, HostListener, Renderer2 } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
     RouterModule
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  }
 }
