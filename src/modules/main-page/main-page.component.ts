@@ -8,7 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MycounterComponent } from '../../commonComponents/mycounter/mycounter.component';
 import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
-
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 @Component({
   selector: 'app-main-page',
   standalone: true,
@@ -21,7 +22,9 @@ import { CarouselModule } from 'primeng/carousel';
     MatIconModule,
     MycounterComponent,
     ImageModule,
-    CarouselModule
+    CarouselModule,
+    CardModule,
+    ButtonModule
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
@@ -43,9 +46,12 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit() {
     this.images = [
-        { itemImageSrc: 'assets/4554-1024x576.jpg', alt: 'Image 2', title: 'Title 2', description: 'تقدم لك تجربة فريدة في تنسيق الحدائق، مع اهتمام بالتفاصيل وتصميمات مبتكرة تضفي جمالاً وفخامة على كل مساحة. من تصميم الحدائق الخاصة إلى إنشاء المساحات العامة الخلابة، نحن نضفي لمسة من الإبداع والاحترافية على كل مشروع.' },
-        { itemImageSrc: 'assets/image-3-1024x504.jpg', alt: 'Image 2', title: 'Title 2', description: ' تميزنا في تركيب نوافير وشلالات تضفي لمسة من الرفاهية، بالإضافة إلى تقديم خدمات التصميم والإشراف على أعمال الصيانة بشكل دوري لضمان استدامة وجمال المساحات الخارجية. نحن هنا لنحول رؤيتك إلى واقع ملموس يبهج العين ويستمتع به كل من يراه.' },
-        { itemImageSrc: 'assets/Untitled-1-1024x576.jpg', alt: 'Image 3', title: 'Title 3', description: '   انضم إلى قائمة عملائنا الراضين واستمتع بخدمة متكاملة وفريق متخصص يضمن لك تحقيق أعلى مستويات الجودة والإبداع في كل مشروع.' }
+        { itemImageSrc: 'assets/4554-1024x576.jpg', alt: 'Image 2', title: ' تصميم وتركيب الحدائق المنزلية',
+           description: "شركة بستان الخليج تقدم خدمات تصميم وتركيب الحدائق المنزلية بأسلوب فني عصري. نحرص على تلبية جميع احتياجاتكم من خلال اختيار الزهور والنباتات التي تناسب ذوقكم وتضيف جمالية لمساحاتكم الخارجية. نقدم حلولاً متكاملة تشمل جميع التفاصيل من تنسيق المساحات إلى إضافة الأثاث الخارجي. فريقنا المختص يضمن تنفيذ التصميمات بدقة واحترافية عالية. دعونا نساعدكم في تحويل حديقتكم إلى ملاذ ساحر وجميل." },
+        { itemImageSrc: 'assets/image-3-1024x504.jpg', alt: 'Image 2', title: 'توريد وتركيب الأشجار المثمرة',
+           description: 'شركة بستان الخليج توفر خدمة توريد وتركيب الأشجار المثمرة بأعلى جودة. نقدم لكم أشجاراً صحية ومنتجة تعزز من جمال حديقتكم وتوفر لكم ثماراً طازجة. فريقنا يتولى جميع مراحل التركيب والعناية لضمان نمو الأشجار بشكل صحي. نحن نقدم الاستشارات اللازمة للحفاظ على صحة الأشجار وزيادة إنتاجيتها. استمتعوا بثمار طازجة من حديقتكم بفضل خبرتنا في هذا المجال.' },
+        { itemImageSrc: 'assets/5f9a18270a171.jpg', alt: 'Image 3', title: ' تصميم وتركيب النوافير والأحواض المائية', 
+          description: '  شركة بستان الخليج تقدم خدمات تصميم وتركيب النوافير والأحواض المائية المنزلية بأساليب حديثة ومبتكرة. نضمن لكم نوافير مدهشة تعزز جمال محيطكم وتضيف لمسة من الهدوء والانتعاش. نقدم أيضاً خدمات صيانة وإصلاح النوافير لضمان استمرار جودتها. كما نوفر خدمة نقل وتركيب النوافير دون التسبب في أي أضرار. اختاروا من بين تشكيلتنا الواسعة لتصميمات النوافير واستمتعوا بجمال المياه المتدفقة.' }
     ];
 
     this.paragraphs = [
