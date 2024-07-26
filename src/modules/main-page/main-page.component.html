@@ -15,11 +15,11 @@
         <div class="galleria-item">
           <img [src]="item.itemImageSrc" class="galleria-image"/>
           <div class="centered-text">
-            <h1 class="p-4" style="color: #fff;font-size:5max;">{{item.title}}</h1>
+            <h1 class="p-4" style="color: #fff;font-size:5vmax;">{{item.title}}</h1>
             <p class="description-text">{{item.description}}</p>
            
           </div>
-          <button class="btn-gallary p-2 m-2">
+          <button class="btn-gallary p-4 m-2">
             اتصل بنا الان
           </button>
         </div>
@@ -28,8 +28,8 @@
   </div>
 </div>
 
-<div class="container p-4" >
-  <div class="header d-flex justify-content-center">
+<div class="container p-4 " >
+  <div class="header d-flex justify-content-center mt-4">
   <h1 style="font-size: 3vmax; font-weight: bolder;">لماذا تختار شركة بستان الخليج</h1>
 </div>
   <div class="row mt-4">
@@ -41,8 +41,7 @@
             <mat-icon>account_balance_wallet</mat-icon>
           </div>      
         </mat-card-header>
-      <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> أفضل الاسعار</h3>
+      <div class="d-flex justify-content-center m-2"><h3 class="myh2 p-3"style="display: block;font-size: 2vmax; font-weight:bold"> أفضل الاسعار</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 20vh">تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
@@ -58,14 +57,14 @@
       <mat-card class="mycard">
         <mat-card-header class="d-flex justify-content-center m-2">
           <div  class=" header-icon ">
-            <mat-icon>star</mat-icon>
+            <mat-icon >star</mat-icon>
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> أفضل الخدمات</h3>
+    <h3 class="myh2 p-3" style="display: block;font-size: 2vmax; font-weight:bold"> أفضل الخدمات</h3>
     </div>
         <mat-card-content style="text-align: center;">
-          <p style="min-height: 20vh">لدينا فريق متكامل من المهندسون الزراعيون والفنيين والعمال المتخصصين بخبرة 
+          <p style="min-height: 20vh;">لدينا فريق متكامل من المهندسون الزراعيون والفنيين والعمال المتخصصين بخبرة 
             10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.</p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
@@ -81,7 +80,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;">  اختبار قبل التركيب</h3>
+    <h3 class="myh2 p-3" style="display: block;font-size: 2vmax; font-weight:bold">  اختبار قبل التركيب</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 20vh">تقوم شركة بستان الخليج لتنسيق الحدائق باختبار باختبار أي ديكور لاي حديقة قبل التركيب لتكوين وجهة نظر شاملة عن 
@@ -106,7 +105,7 @@
       <div class="row gx-4 align-items-center">
           <!-- Hero Content -->
           <div class="col-md-6 order-2 order-md-1 hero-content">
-              <h2 class="display-4 fw-bold mb-4" style="color: #529846;">الخبراء في تصميم وتنسيق الحدائق الفاخرة في السعودية</h2>
+              <h2 class="display-4 fw-bold mb-4 myh2" style="color: #529846;;">الخبراء في تصميم وتنسيق الحدائق الفاخرة في السعودية</h2>
               <div class="divider mb-4"></div>
               <p class="lead text-dark mb-4">
                   <strong>شركة بستان الخليج</strong> تقدم لك تجربة فريدة في تنسيق الحدائق، مع اهتمام بالتفاصيل وتصميمات مبتكرة تضفي جمالاً وفخامة على كل مساحة. من تصميم الحدائق الخاصة إلى إنشاء المساحات العامة الخلابة، نحن نضفي لمسة من الإبداع والاحترافية على كل مشروع.
@@ -138,13 +137,13 @@
     <div class="row">
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;">مظلات وبرجولات</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;">مظلات وبرجولات</label>
           <app-mycounter style="color: #eee;" [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;">نوافير وشلالات</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;">نوافير وشلالات</label>
           <app-mycounter style="color: #eee;" [end]="endVal" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
@@ -156,7 +155,7 @@
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;">تركيبات عشب صناعى</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;">تركيبات عشب صناعى</label>
          <app-mycounter style="color: #eee;" [end]="500" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
@@ -164,25 +163,25 @@
     <div class="row">
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;"> تركيب عشب جدارى</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;"> تركيب عشب جدارى</label>
           <app-mycounter style="color: #eee;" [end]="300" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;"> ديكورات صناعية</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;"> ديكورات صناعية</label>
           <app-mycounter style="color: #eee;" [end]="800" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;"> تركيب شبكات رى</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;"> تركيب شبكات رى</label>
          <app-mycounter style="color: #eee;" [end]="400" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="counter-item">
-           <label style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;">  زراعة نخيل</label>
+           <label class="pb-3" style="font-size: larger;font-weight: bolder;" style="font-size: larger;font-weight: bolder;">  زراعة نخيل</label>
          <app-mycounter style="color: #eee;" [end]="200" [duration]="2" [isVisible]="showCounters"></app-mycounter>
         </div>
       </div>
@@ -196,12 +195,12 @@
 
 
 
-<div class="container p-3" >
+<div class="container p-4 pt-6" >
   <div class="header d-flex justify-content-center">
-    <h1 style="font-size: 3vmax; font-weight: bolder;">خدماتنا</h1>
+    <h1 class="myh2" style="font-size: 3vmax; font-weight: bolder;">خدماتنا</h1>
 </div>
 <div class="header d-flex justify-content-center">
-  <p style="width: 50%;font-size: larger; text-align: center;">لدينا مجموعة شاملة من خدمات تنسيق الحدائق وتصميم المساحات الخضراء بأعلى جودة وأفضل الأسعار
+  <p style="width: 50%;font-size: 1.3vmax; text-align: center;">لدينا مجموعة شاملة من خدمات تنسيق الحدائق وتصميم المساحات الخضراء بأعلى جودة وأفضل الأسعار
     . نقدم خدمات تصميم الشلالات والنوافير وتركيب المظلات والعشب الطبيعي والصناعي بأنواعه.
      كما نوفر خدمة تركيب وتوريد العشب الجداري وتزيين الأشجار وزرع النخيل والشتلات. بالإضافة
      إلى تركيب شبكات الري وبناء الحجر العشوائي والممرات وتصميم مخططات اللاندسكيب. 
@@ -222,10 +221,10 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> زراعة الأشجار والورود</h3>
+    <h3 class="myh2 p-3" style="display: block;"> زراعة الأشجار والورود</h3>
     </div>
         <mat-card-content style="text-align: center;">
-          <p style="min-height: 30vh">
+          <p style="min-height: 35vh">
             نقدم خدمة زراعة الأشجار والورود بأجود الأنواع لتضيف لمسة من الجمال والطبيعة لحديقتكم
             . نحرص على اختيار الأنواع المناسبة للبيئة المحلية وتقديم النصائح اللازمة للعناية بها. استمتعوا بحديقة مزدهرة بالألوان والأزهار العطرة التي تعزز من جمال مساحاتكم الخارجية.
           </p>
@@ -249,7 +248,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> تركيب عشب طبيعي</h3>
+     <h3 class="myh2 p-3" style="display: block;"> تركيب عشب طبيعي</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -275,7 +274,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> تركيب عشب صناعي  </h3>
+     <h3 class="myh2 p-3" style="display: block;"> تركيب عشب صناعي  </h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -302,7 +301,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> تركيب عشب جداري</h3>
+     <h3 class="myh2 p-3" style="display: block;"> تركيب عشب جداري</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -330,7 +329,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;">تصميم ملاعب</h3>
+      <h3 class="myh2 p-3" style="display: block;">تصميم ملاعب</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -357,7 +356,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> خدمات صيانة الحدائق</h3>
+      <h3 class="myh2 p-3" style="display: block;"> خدمات صيانة الحدائق</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -385,7 +384,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> تصميم ديكورات زراعية  </h3>
+      <h3 class="myh2 p-3" style="display: block;"> تصميم ديكورات زراعية  </h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -412,7 +411,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;">  تركيب برجولات ومظلات </h3>
+      <h3 class="myh2 p-3" class="myh2 p-3"style="display: block;">  تركيب برجولات ومظلات </h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -439,7 +438,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> تصميم وتركيب نوافير </h3>
+      <h3 class="myh2 p-3" class="myh2 p-3"style="display: block;"> تصميم وتركيب نوافير </h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -465,11 +464,10 @@
            </p-image>
           </div>      
         </mat-card-header>
-      <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> مكافحة الحشرات بالحدائق  </h3>
+      <div class="d-flex justify-content-center m-2"><h3 class="myh2 p-3"style="display: block;"> مكافحة الحشرات بالحدائق  </h3>
     </div>
         <mat-card-content style="text-align: center;">
-          <p style="min-height: 35vh">
+          <p style="min-height: 30vh">
             نقدم خدمات مكافحة الحشرات في الحدائق باستخدام أفضل الوسائل الآمنة والفعالة.
              نحرص على حماية نباتاتكم وأشجاركم من الآفات لضمان نمو صحي ومظهر جميل لحديقتكم
              . فريقنا المتخصص يوفر حلولاً مضمونة للتخلص من الحشرات بشكل نهائي.
@@ -493,11 +491,10 @@
            </p-image>
           </div>      
         </mat-card-header>
-      <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;">  تصميم وتركيب شلالات </h3>
+      <div class="d-flex justify-content-center m-2"><h3 class="myh2 p-3"style="display: block;">  تصميم وتركيب شلالات </h3>
     </div>
         <mat-card-content style="text-align: center;">
-          <p style="min-height: 35vh">
+          <p style="min-height: 30vh">
             نقدم خدمات تصميم وتركيب الشلالات المنزلية لإضافة لمسة من الهدوء والجمال لمحيطكم. 
             نستخدم تقنيات مبتكرة لتصميم شلالات تتناسب مع جميع الأذواق والمساحات. 
             استمتعوا بصوت الماء المتدفق والمنظر الخلاب لشلالاتنا المصممة بدقة وفنية عالية.
@@ -521,11 +518,10 @@
            </p-image>
           </div>      
         </mat-card-header>
-      <div class="d-flex justify-content-center m-2">
-      <h3 style="display: block;"> تركيب شبكات ري</h3>
+      <div class="d-flex justify-content-center m-2"><h3 class="myh2 p-3"style="display: block;"> تركيب شبكات ري</h3>
     </div>
         <mat-card-content style="text-align: center;">
-          <p style="min-height: 35vh">
+          <p style="min-height: 30vh">
             نقوم بتركيب شبكات الري الحديثة لضمان توزيع المياه بشكل متساوٍ وفعال في حديقتكم
             . نستخدم تقنيات متطورة لتصميم شبكات ري تتناسب مع احتياجات النباتات والأشجار.
              نضمن تركيباً محترفاً وصيانة دورية للحفاظ على كفاءة الشبكة وضمان صحة النباتات.
@@ -551,7 +547,7 @@
       <div class="col-md-3 col-sm-12"></div>
       <div class="col-6 text-center ">
         <h1 style="font-size: 3vmax; font-weight: bolder;"> أعمالنا</h1>
-      <p style="font-size: larger; text-align: center;">
+      <p style="text-align: center;">
         بخبرة أكثر من 10 أعوام في مجال تنسيق الحدائق، تمكنت شركة بستان الخليج لتنسيق الحدائق في السعودية من القيام بما يتعدى اجمالي 1000 مشروع وعميل. قُمنا بمشاريع تنسيق
          حدائق في كل أرجاء المملكة العربية السعودية (الرياض – جدة – المدينة المنورة – مكة
          المكرمة – الاحساء – الدمام – الطائف – بريدة – أبها – نجران – إلخ). قمنا بمشاريع تنسيق 

@@ -50,3 +50,8 @@ background-color: #fff !important;
   .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators{
     background-color:transparent;
   }
+
+
+  .p-ripple .p-element .p-galleria-item-next .p-galleria-item-nav .p-link button{
+    display: none !important;
+    }

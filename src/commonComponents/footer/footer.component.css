@@ -3,6 +3,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1vmax;
   }
   
   /* Styles for the background of the counter section */
@@ -21,6 +22,7 @@ li{
   transition: color 0.3s ease, border-bottom 0.3s ease, font-weight 0.3s ease;
   color: #74AC6A;
   font-weight: 900;
+
   
 }
   
@@ -56,4 +58,13 @@ a{
 .nav-link:hover::after, .nav-link.active-link::after {
   transform: scaleX(1);
   transform-origin: center initial;
+}
+
+p{
+  line-height: 1.6;
+  font-size: 1.3vmax;
+}
+
+.myh{
+  font: 2rem / 32px 'Cairo';;
 }
