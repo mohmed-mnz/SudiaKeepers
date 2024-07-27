@@ -7,9 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MycounterComponent } from '../../commonComponents/mycounter/mycounter.component';
 import { ImageModule } from 'primeng/image';
-import { CarouselModule } from 'primeng/carousel';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { Router } from '@angular/router';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @Component({
   selector: 'app-main-page',
   standalone: true,
@@ -22,9 +23,9 @@ import { ButtonModule } from 'primeng/button';
     MatIconModule,
     MycounterComponent,
     ImageModule,
-    CarouselModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    CarouselModule
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
@@ -41,8 +42,14 @@ export class MainPageComponent implements OnInit {
     { breakpoint: '768px', numVisible: 3 },
     { breakpoint: '560px', numVisible: 1 }
   ];
-
-  constructor() { }
+  userReviews = [
+    { name: 'سارة من جدة', opinion: 'شركة بستان الخليج لتنسيق الحدائق قامت بتحويل حديقتي إلى واحة خضراء جميلة. لقد كانوا محترفين وسريعين في تنفيذ العمل، وأنا سعيدة جداً بالنتيجة النهائية.' },
+    { name: 'أحمد من الرياض', opinion: 'فريق شركة بستان الخليج كان مذهلاً! قاموا بتصميم حديقة أمام منزلي بطريقة تفوق توقعاتي. أنصح بهم بشدة لكل من يبحث عن تنسيق حدائق مميز.' },
+    { name: 'ليلى من الدمام', opinion: 'لقد استفدت من خدمات شركة بستان الخليج لتنسيق الحديقة الخلفية لمنزلي. كانت الخدمة ممتازة والأسعار معقولة جداً. سأعود إليهم بالتأكيد لأي أعمال تنسيق مستقبلية.' },
+    { name: 'محمد من الخبر', opinion: 'شركة بستان الخليج لتنسيق الحدائق تقدم خدمات رائعة وجودة عالية. فريقهم كان متعاوناً وقدموا لي نصائح قيمة حول كيفية العناية بالحديقة بعد التنسيق.' },
+    { name: 'فاطمة من المدينة المنورة', opinion: 'تجربتي مع شركة بستان الخليج لتنسيق الحدائق كانت أكثر من رائعة. التصميم كان جميل جداً والتنفيذ كان سريع وفعال. أوصي بهم لكل من يريد تحويل حديقته إلى مكان ساحر.' }
+  ];
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.images = [
@@ -54,12 +61,7 @@ export class MainPageComponent implements OnInit {
           description: '  شركة بستان الخليج تقدم خدمات تصميم وتركيب النوافير والأحواض المائية المنزلية بأساليب حديثة ومبتكرة. نضمن لكم نوافير مدهشة تعزز جمال محيطكم وتضيف لمسة من الهدوء والانتعاش. نقدم أيضاً خدمات صيانة وإصلاح النوافير لضمان استمرار جودتها. كما نوفر خدمة نقل وتركيب النوافير دون التسبب في أي أضرار. اختاروا من بين تشكيلتنا الواسعة لتصميمات النوافير واستمتعوا بجمال المياه المتدفقة.' }
     ];
 
-    this.paragraphs = [
-      'Paragraph 1 content...',
-      'Paragraph 2 content...',
-      'Paragraph 3 content...',
-      'Paragraph 4 content...'
-    ];
+   
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -74,5 +76,50 @@ export class MainPageComponent implements OnInit {
         this.showCounters = true;
       }
     }
+  }
+
+  openNewTab(index:any) {
+    switch(index){
+      case 1:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/treesAndFlowers'])), '_blank');
+        break;
+      case 2:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/natural-grass'])), '_blank');
+        break;
+      case 3:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/unnatural-grass'])), '_blank');
+        break;
+      case 4:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/wallGrass'])), '_blank');
+        break;
+      case 5:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/playgarden'])), '_blank');
+        break;
+      case 6:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/grdenMaintence'])), '_blank');
+         break;
+      case 7:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/agriculturalDecoration'])), '_blank');
+        break;
+      case 8:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/pergolas'])), '_blank');
+        break;
+      case 9:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/fountains'])), '_blank');
+        break;
+      case 10:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/pestControl'])), '_blank');
+        break;
+      case 11:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/Waterfall'])), '_blank');
+        break;
+      case 12:
+        window.open(this.router.serializeUrl(this.router.createUrlTree(['/irrigationNetwork'])), '_blank');
+        break;
+      default:
+        let url = this.router.serializeUrl(this.router.createUrlTree(['/natural-grass']));
+          window.open(url, '_blank');
+    }
+   
   }
 }
