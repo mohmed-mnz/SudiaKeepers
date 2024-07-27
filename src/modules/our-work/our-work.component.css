@@ -80,85 +80,95 @@
 }
 
 /*Section two*/
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-/* تنسيق قسم المحفظة */
-.portfolio-section {
-    padding: 2rem 0;
+.filter-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #27ae60; /* Changed color to green */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff; /* Changed text color to white */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons button.active, .filter-buttons button:hover {
+  background-color: #219150; /* Changed hover color to a darker shade of green */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.overlay .text {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  /* تنسيق أزرار الفلاتر */
-  .portfolio-filter {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .portfolio-filter button {
-    background-color: #28a745; /* اللون الأخضر */
-    border: none;
-    color: white;
-    padding: 10px 20px;
+  .filter-buttons button {
     margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
-  .portfolio-filter button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .portfolio-filter button.active {
-    background-color: #155724;
-  }
-
-  /* تنسيق عناصر المحفظة */
-  .portfolio-item {
-    margin-bottom: 2rem;
-  }
-
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-body {
-    text-align: center;
-  }
-
-  .card-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
-  .card-text {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .card .btn {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-
-  .card .btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-@media (max-width: 576px) {
-    .portfolio-filter button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  }
+}

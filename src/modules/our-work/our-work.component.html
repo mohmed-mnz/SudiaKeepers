@@ -10,29 +10,22 @@
   </div>
 </section>
 
-<div class="container portfolio-section">
-  <div class="portfolio-filter">
-    <button (click)="filterItems('all')" [class.active]="selectedFilter === 'all'">الكل</button>
-    <button (click)="filterItems('tents-and-shades')" [class.active]="selectedFilter === 'tents-and-shades'">مظلات و شلالات</button>
-    <button (click)="filterItems('artificial-turf-installation')" [class.active]="selectedFilter === 'artificial-turf-installation'">تركيب عشب جداري</button>
-    <button (click)="filterItems('decorations')" [class.active]="selectedFilter === 'decorations'">ديكورات صناعية</button>
-    <button (click)="filterItems('palm-planting')" [class.active]="selectedFilter === 'palm-planting'">زراعة نخيل</button>
-    <button (click)="filterItems('irrigation-networks-installation')" [class.active]="selectedFilter === 'irrigation-networks-installation'">تركيب شبكات ري</button>
-    <button (click)="filterItems('supply-orders')" [class.active]="selectedFilter === 'supply-orders'">طلبات توريد</button>
-    <button (click)="filterItems('synthetic-grass-installation')" [class.active]="selectedFilter === 'synthetic-grass-installation'">تركيبات عشب صناعي</button>
-  </div>
+<div class="filter-buttons">
+  <button *ngFor="let category of categories"
+          class="filter-button"
+          [class.active]="selectedFilter === category.category"
+          (click)="filterItems(category.category)">
+    {{ category.name }}
+  </button>
+  <button class="filter-button" [class.active]="selectedFilter === 'all'" (click)="filterItems('all')">الكل</button>
+</div>
 
-  <div class="row">
-    <div *for="let item of filteredItems" class="col-md-4 portfolio-item" [class]="item.category">
-      <div class="card">
-        <div *for="let image of item.images">
-          <img [src]="image" [alt]="item.title" width="100%" height="200px" class="card-img-top">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">{{item.title}}</h5>
-          <p class="card-text">{{item.description}}</p>
-          <a href="#" class="btn btn-primary">عرض المزيد</a>
-        </div>
+<div class="portfolio-grid">
+  <div class="portfolio-item" *ngFor="let item of filteredImages" @fadeInOut>
+    <div class="image-container">
+      <img [src]="item.image" alt="Portfolio Image">
+      <div class="overlay">
+        <div class="text">{{ item.description }}</div>
       </div>
     </div>
   </div>
