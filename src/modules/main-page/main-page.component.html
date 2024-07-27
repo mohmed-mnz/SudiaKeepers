@@ -36,7 +36,7 @@
   
     <div class="col-md-4 col-sm-12 mb-3">
       <mat-card class="mycard">
-        <mat-card-header class="d-flex justify-content-center m-2">
+        <mat-card-header class="d-flex justify-content-center m-2 ">
           <div  class=" header-icon ">
             <mat-icon>account_balance_wallet</mat-icon>
           </div>      
@@ -47,7 +47,9 @@
           <p style="min-height: 20vh">تضمن شركة بستان الخليج لتنسيق الحدائق أفضل العروض و الأسعار في المملكة العربية السعودية على جميع خدمات تنسيق وتصميم وصيانة الحدائق.</p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <!-- <button class="btn btn-primary" style="width: 100px;">المزيد</button> -->
+          <a href="https://wa.me/966533927072" class="btn btn-primary" target="_blank">
+            المزيد      </a>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -68,7 +70,9 @@
             10 أعوام في تنسيق الحدائق وتصميمها بشكل احترافي.</p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <!-- <button class="btn btn-primary" style="width: 100px;">المزيد</button> -->
+          <a href="https://wa.me/966533927072" class="btn btn-primary" target="_blank">
+            المزيد      </a>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -87,7 +91,9 @@
             الديكور المناسب لحديقتك و تنسيقها.</p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <!-- <button class="btn btn-primary" style="width: 100px;">المزيد</button> -->
+          <a href="https://wa.me/966533927072" class="btn btn-primary" target="_blank">
+            المزيد      </a>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -197,10 +203,10 @@
 
 <div class="container p-4 pt-6" >
   <div class="header d-flex justify-content-center">
-    <h1 class="myh2" style="font-size: 3vmax; font-weight: bolder;">خدماتنا</h1>
+    <h1 class="myh2 pt-5" style="font-size: 3vmax; font-weight: bolder;">خدماتنا</h1>
 </div>
 <div class="header d-flex justify-content-center">
-  <p style="width: 50%;font-size: 1.3vmax; text-align: center;">لدينا مجموعة شاملة من خدمات تنسيق الحدائق وتصميم المساحات الخضراء بأعلى جودة وأفضل الأسعار
+  <p style="width: 100%;font-size: 1.3vmax; text-align: center;">لدينا مجموعة شاملة من خدمات تنسيق الحدائق وتصميم المساحات الخضراء بأعلى جودة وأفضل الأسعار
     . نقدم خدمات تصميم الشلالات والنوافير وتركيب المظلات والعشب الطبيعي والصناعي بأنواعه.
      كما نوفر خدمة تركيب وتوريد العشب الجداري وتزيين الأشجار وزرع النخيل والشتلات. بالإضافة
      إلى تركيب شبكات الري وبناء الحجر العشوائي والممرات وتصميم مخططات اللاندسكيب. 
@@ -231,7 +237,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(1)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -259,7 +265,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(2)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -287,7 +293,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(3)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -305,7 +311,7 @@
           </div>      
         </mat-card-header>
       <div class="d-flex justify-content-center m-2">
-     <h3 class="myh2 p-3" style="display: block;"> تركيب عشب جداري</h3>
+     <h3 class="myh2 p-3" style="display: block;" > تركيب عشب جداري</h3>
     </div>
         <mat-card-content style="text-align: center;">
           <p style="min-height: 30vh">
@@ -315,7 +321,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(4)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -344,7 +350,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;"(click)="openNewTab(5)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -372,7 +378,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(6)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -400,7 +406,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(7)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -429,7 +435,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(8)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -457,7 +463,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(9)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -484,7 +490,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;"  (click)="openNewTab(10)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -512,7 +518,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;"  (click)="openNewTab(11)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -522,7 +528,7 @@
       <mat-card class="mycardWithHeader">
         <mat-card-header class="d-flex justify-content-center headerWithImg">
           <div >
-           <p-image  src="./../assets/5843704126544922506.jpg" 
+           <p-image  src="./../assets/5843704126544922509.jpg" 
            [preview]="true" 
            alt="Image" 
            height="400vh"
@@ -540,7 +546,7 @@
           </p>
         </mat-card-content>
         <mat-card-footer class="d-flex justify-content-center m-2">
-          <button class="btn btn-primary" style="width: 100px;">المزيد</button>
+          <button class="btn btn-primary" style="width: 100px;"  (click)="openNewTab(12)">المزيد</button>
         </mat-card-footer>
       </mat-card>
     </div>
@@ -555,20 +561,18 @@
 
  <div class="container">
   <div class="  container-fluid p-3 services-section"style='background-color:#eee'>
-    <div class="row">
-      <div class="col-md-3 col-sm-12"></div>
-      <div class="col-6 text-center ">
-        <h1 style="font-size: 3vmax; font-weight: bolder;"> أعمالنا</h1>
-      <p style="text-align: center;">
-        بخبرة أكثر من 10 أعوام في مجال تنسيق الحدائق، تمكنت شركة بستان الخليج لتنسيق الحدائق في السعودية من القيام بما يتعدى اجمالي 1000 مشروع وعميل. قُمنا بمشاريع تنسيق
-         حدائق في كل أرجاء المملكة العربية السعودية (الرياض – جدة – المدينة المنورة – مكة
-         المكرمة – الاحساء – الدمام – الطائف – بريدة – أبها – نجران – إلخ). قمنا بمشاريع تنسيق 
-        حدائق للمنازل والفلل والقصور، ومشاريع العشب الطبيعي والصناعي والجداري. كما 
-        قمنا بتصميم وتركيب أفضل المظلات والسواتر والبرجولات بكافة أنواعها، إلخ.
-      </p>
-      </div>
-      <div class="col-md-3 col-sm-12"></div>
-    </div>
+    <div class="header d-flex justify-content-center">
+      <h1 class="myh2 pt-5" style="font-size: 3vmax; font-weight: bolder;">أعمالنا</h1>
+  </div>
+  <div class="header d-flex justify-content-center">
+    <p style="width: 100%;font-size: 1.3vmax; text-align: center;">لدينا مجموعة شاملة من خدمات تنسيق الحدائق وتصميم المساحات الخضراء بأعلى جودة وأفضل الأسعا بخبرة أكثر من 10 أعوام في مجال تنسيق الحدائق، تمكنت شركة بستان الخليج لتنسيق الحدائق في السعودية من القيام بما يتعدى اجمالي 1000 مشروع وعميل. قُمنا بمشاريع تنسيق
+      حدائق في كل أرجاء المملكة العربية السعودية (الرياض – جدة – المدينة المنورة – مكة
+      المكرمة – الاحساء – الدمام – الطائف – بريدة – أبها – نجران – إلخ). قمنا بمشاريع تنسيق 
+     حدائق للمنازل والفلل والقصور، ومشاريع العشب الطبيعي والصناعي والجداري. كما 
+     قمنا بتصميم وتركيب أفضل المظلات والسواتر والبرجولات بكافة أنواعها، إلخ.
+    </p>
+  </div>
+   
     
       <div class="row p-3" >
         <div class="col-md-4 col-sm-12">
@@ -642,3 +646,39 @@
   </div>
     </div>
 </div> 
+
+
+
+
+ 
+
+  
+
+
+
+
+  
+  <div class="row p-5 customeropinion">
+    <div class="row">
+      <div class="col-md-3 col-sm-12"></div>
+      <div class="col-6 text-center ">
+        <h1  class="myh2 pb-2" style="font-size: 3vmax; font-weight: bolder;"> اراء العملاء</h1>
+        <p >
+        هدفنا الأول هو رضاء العملاء عن جودة خدمات تنسيق الحدائق لدينا. هذا الذي يجعل عملاءنا
+         سعداء بالخدمة ويوصون بنا لجيرانهم وأقاربهم.
+      </p>
+      </div>
+      <div class="col-md-3 col-sm-12"></div>
+    </div>
+    <carousel [interval]="3000" [noPause]="true" [noWrap]="false">
+      <slide *ngFor="let review of userReviews">
+        <div class="opinion-item">
+          <div class="centered-text">
+            <h1 class="p-4" style="color: #000;font-size:5vmax;">{{review.name}}</h1>
+            <p style="color: #fff;" class="description-text">{{review.opinion}}</p>     
+          </div>
+          
+        </div>
+      </slide>
+    </carousel>
+  </div> 
