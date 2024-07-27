@@ -122,4 +122,8 @@ export class MainPageComponent implements OnInit {
     }
 
   }
+
+  openImageInNewTab(imageUrl: string): void {
+    window.open(imageUrl, '_blank');
+  }
 }
