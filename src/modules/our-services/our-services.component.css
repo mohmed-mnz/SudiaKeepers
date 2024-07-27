@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.hero-overlay {
+.hero-overlay1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,31 +22,31 @@
   z-index: 1;
 }
 
-.hero-content {
+.hero-content1 {
   position: relative;
   z-index: 2;
 }
 
-.hero-title {
+.hero-title1 {
   font-size: 5rem;
   font-weight: bolder;
   margin-bottom: 1rem;
   font-family: 'Cairo', sans-serif;
 }
 
-.hero-subtitle {
+.hero-subtitle1 {
   font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 1.5rem;
 }
 
-.hero-description {
+.hero-description1 {
   font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-.btn-primary {
+.btn-primary1 {
   background-color: #27ae60;
   border: none;
   color: #ffffff;
@@ -56,26 +56,26 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-primary1:hover {
   background-color: #219150;
   transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-  .hero-title {
+  .hero-title1 {
       font-size: 2rem;
   }
 
-  .hero-subtitle {
+  .hero-subtitle1 {
       font-size: 1.2rem;
   }
 
-  .hero-description {
+  .hero-description1 {
       font-size: 1rem;
   }
 }
 
-.hero-section1:hover .hero-overlay {
+.hero-section1:hover .hero-overlay1 {
   background: rgba(0, 0, 0, 0.33);
 }
 
@@ -83,294 +83,214 @@
 
 
 
+/*the second section*/
+    .services-section {
+        font-family: 'Cairo', sans-serif;
+        padding: 50px 0;
+        text-align: center;
+        background-color: #ffffff;
+    }
+
+    .hero-content {
+        margin-bottom: 50px;
+    }
+
+    .service-card {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 30px;
+        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 30px;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-image {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .service-card:hover .card-image img {
+        transform: scale(1.1);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .service-card:hover .overlay {
+        opacity: 0;
+    }
+
+    .card-content {
+        padding: 40px;
+    }
+
+    .card-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .card-description {
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: #444;
+        line-height: 1.8;
+    }
+
+    .btn-primary {
+        background-color: #468516;
+        color: #fff;
+        border: none;
+        padding: 14px 35px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.4s ease-in-out;
+        font-size: 18px;
+    }
+
+    .btn-primary:hover {
+        background-color: #52e53b;
+    }
+
+    /* Section three */
 
 
-
-
-.image-container {
-    position: relative;
-    display: inline-block;
-    text-align: center;
+  .pricing-section {
+     background: url('../../assets/counter_bg7.png') no-repeat center center fixed;
+     background-size: cover;
+     display: flex;
+     align-items: center;
+      padding: 60px 0;
+      color: #333;
   }
 
-  .background-image {
-    width: 100%;
-    height: auto;
+  .pricing-section h2 {
+      font-size: 2.5rem;
+      color: #004d40;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
-  .centered-text {
-    position: absolute;
-    font-weight: bolder;
-    font-size: 30px;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-    color: white; /* Change the text color if needed */
-    background-color: rgba(0, 0, 0, 0.3); /* Add a background color with transparency if needed */
-    padding: 10px;
-    border-radius: 5px; /* Optional: add rounded corners */
+  .pricing-section p {
+      font-size: 1.25rem;
+      color: #00796b;
+      max-width: 600px;
+      margin: 0 auto 40px;
   }
 
-
-  .mycard {
-    min-height: 30vh;
-    margin: 20px;
-
+  .pricing-card {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      background: #ffffff;
+      border: none;
+      text-align: center;
+      padding: 30px;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 30px;
   }
 
-  .header-icon {
-    background: #6FA566;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   }
 
-  .section1 mat-card-header {
-    background: #2ac04b;
-    border-bottom: 1px solid #ccc;
-    color: #fff;
+  .icon-container {
+      background: #004d40;
+      color: #ffffff;
+      border-radius: 50%;
+      padding: 20px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
   }
 
-  /* Styles for the container with background color */
-  .counter-container {
-    background-color: rgb(75, 158, 61);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .pricing-card h5 {
+      font-size: 1.5rem;
+      color: #004d40;
+      margin-bottom: 15px;
+      font-weight: 700;
   }
 
-  /* Styles for the background of the counter section */
-  .counter-background {
-    background: url('../../assets/counter_bg7.png') no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-    border-radius: 8px;
+  .pricing-card .price {
+      font-size: 2.5rem;
+      color: #004d40;
+      font-weight: 700;
+      margin-bottom: 20px;
   }
 
-  /* Flexbox layout for the row */
-
-  /* Styles for each counter item */
-  .counter-item {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  .pricing-card ul li {
+      font-size: 1.1rem;
+      color: #004d40;
+      margin-bottom: 10px;
   }
 
-  .counter-item label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: rgb(75, 158, 61);
+  .btn-primary {
+      background: #004d40;
+      border-color: #004d40;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.4s, transform 0.4s;
   }
 
-  app-mycounter {
-    font-size: 2em;
-    font-weight: bold;
-  }
-  .services-section .mat-mdc-card-header{
-    padding: 0;
+  .btn-primary:hover {
+      background: #00796b;
+      border-color: #00796b;
+      transform: scale(1.05);
   }
 
-  .center-title h {
-    text-align: center;
-    color: rgb(75, 158, 61);
+  .basic-bundle {
+      border: 2px solid #b9fbc0;
   }
 
-
-  .mycard {
-    position: relative;
+  .standard-bundle {
+      border: 2px solid #a5d6a7;
   }
 
-  .header-image {
-    max-width: 100%;
-    max-height: 100%;
+  .premium-bundle {
+      border: 2px solid #004d40;
   }
 
-  .content-overlay {
-    z-index: 0;
-    position: absolute;
-    top: 99%; /* Adjust this value as needed */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.8); /* Optional: add background for better readability */
-    padding: 20px;
-    width: 80%; /* Adjust as needed */
+  .ultimate-bundle {
+      border: 2px solid #003d33;
   }
+.pricing-card.selected {
+  border: 2px solid #004d40;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
 
-  .center-title {
-    text-align: center;
-  }
-
-
-  .customeropinion{
-    background: url('../../assets/8.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-    border-radius: 8px;
-    color: #fff;
-  }
-
-  p-carousel {
-    color: #2ac04b;
-  }
-
-
-  .opinion-item {
-
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-
-
-  .image-container {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-  }
-
-  .background-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .centered-text {
-    position: absolute;
-    font-weight: bolder;
-    font-size: 30px;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-    color: white; /* Change the text color if needed */
-    background-color: rgba(0, 0, 0, 0.3); /* Add a background color with transparency if needed */
-    padding: 10px;
-    border-radius: 5px; /* Optional: add rounded corners */
-  }
-
-
-  .mycard {
-    min-height: 30vh;
-    margin: 20px;
-
-  }
-
-  .header-icon {
-    background: #6FA566;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .section1 mat-card-header {
-    background: #2ac04b;
-    border-bottom: 1px solid #ccc;
-    color: #fff;
-  }
-
-  /* Styles for the container with background color */
-  .counter-container {
-    background-color: rgb(75, 158, 61);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Styles for the background of the counter section */
-  .counter-background {
-    background: url('../../assets/counter_bg7.png') no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  /* Flexbox layout for the row */
-
-  /* Styles for each counter item */
-  .counter-item {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-  .counter-item label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: rgb(75, 158, 61);
-  }
-
-  app-mycounter {
-    font-size: 2em;
-    font-weight: bold;
-  }
-  .services-section .mat-mdc-card-header{
-    padding: 0;
-  }
-
-  .center-title h {
-    text-align: center;
-    color: rgb(75, 158, 61);
-  }
-
-
-  .mycard {
-    position: relative;
-  }
-
-  .header-image {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .content-overlay {
-    z-index: 0;
-    position: absolute;
-    top: 99%; /* Adjust this value as needed */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.8); /* Optional: add background for better readability */
-    padding: 20px;
-    width: 80%; /* Adjust as needed */
-  }
-
-  .center-title {
-    text-align: center;
-  }
-
-
-  .customeropinion{
-    background: url('../../assets/8.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 20px;
-    border-radius: 8px;
-    color: #fff;
-  }
-
-  p-carousel {
-    color: #2ac04b;
-  }
-
-
-  .opinion-item {
-
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
+.pricing-card:not(.selected):hover {
+  border: 2px solid #00796b;
+  background: #e8f5e9;
+}

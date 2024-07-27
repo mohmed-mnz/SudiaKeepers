@@ -89,6 +89,7 @@
     background: #94929200;
     color: #333333;
     padding: 6rem 1rem;
+    font-family: 'Cairo', sans-serif;
 }
 
 @media (max-width: 992px) {
@@ -122,6 +123,13 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     line-height: 1.2;
+    font-family: 'Cairo', sans-serif;
+
+}
+h5 , h3{
+font-weight: bold;
+font-family: 'Cairo';
+font-size: medium;
 }
 
 .divider {
@@ -134,6 +142,8 @@
 .hero-content p {
     font-size: 1.125rem;
     line-height: 1.6;
+    font-family: 'Cairo', sans-serif;
+
 }
 
 .btn {
@@ -162,10 +172,13 @@
 
 .btn i {
     font-size: 1.6rem;
+
 }
 
 .btn span {
     font-size: 1.125rem;
+    font-family: 'Cairo', sans-serif;
+
 }
 
 .btn:focus, .btn:active {
@@ -209,6 +222,8 @@
     background: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Cairo';
+
 }
 
 .shadow-card:hover {
@@ -218,10 +233,12 @@
 
 .feature-card .fa-3x {
     font-size: 2.5em;
+
 }
 .feature-card {
     border: none;
     background-color: #fff;
+
 }
 .shadow-card {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -295,10 +312,16 @@
 
 .text-gold {
     color: #d4af37;
+font-family: 'Cairo';
 }
 
 .text-off-white {
     color: #000000;
+    font-family: 'Cairo';
+
+}
+h4{
+font-weight: 600;
 }
 
 @media (max-width: 768px) {
