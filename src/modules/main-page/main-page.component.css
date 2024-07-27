@@ -383,3 +383,32 @@ background-color: #529846;
     font-size: 0.6rem;
   }
 }
+
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: e;
+  font-size: 2rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .eye-icon {
+  opacity: 0.5;
+}
+
+.img:hover{
+  filter: brightness(40%);
+}
