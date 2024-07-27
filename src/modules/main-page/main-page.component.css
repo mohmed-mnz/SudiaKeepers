@@ -412,3 +412,18 @@ background-color: #529846;
 .img:hover{
   filter: brightness(40%);
 }
+
+.rating-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating-section .mat-icon {
+  font-size: 24px;
+  color: #ffeb3b; /* Yellow color for filled stars */
+}
+
+.rating-section .empty-star {
+  color: #e0e0e0; /* Gray color for empty stars */
+}
