@@ -1,81 +1,39 @@
-<div class="  container-fluid p-4 services-section"style='background-color:#eee'>
-    <div class="row" style="margin-top:10vh;">
-      <div class="col-md-3 col-sm-12"></div>
-      <div class="col-6 text-center ">
-        <h1 style="color: rgb(75, 158, 61);;"> أعمالنا</h1>
-      </div>a
-      <div class="col-md-3 col-sm-12"></div>
-    </div>
-    
-      <div class="row p-5" >
-        <div class="col-md-4 col-sm-12">
-          <p-image 
-          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-          [preview]="true" 
-          alt="Image" 
-          width="100%">
-              <ng-template pTemplate="indicator">
-                  <i class="pi pi-check"></i>
-              </ng-template>
-      </p-image>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <p-image 
-          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-          [preview]="true" 
-          alt="Image" 
-          width="100%">
-              <ng-template pTemplate="indicator">
-                  <i class="pi pi-check"></i>
-              </ng-template>
-      </p-image>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <p-image 
-          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-          [preview]="true" 
-          alt="Image" 
-          width="100%">
-              <ng-template pTemplate="indicator">
-                  <i class="pi pi-check"></i>
-              </ng-template>
-      </p-image>
-        </div>
-    </div>
-    <div class="row p-5">
-      <div class="col-md-4 col-sm-12">
-        <p-image 
-        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-        [preview]="true" 
-        alt="Image" 
-        width="100%">
-            <ng-template pTemplate="indicator">
-                <i class="pi pi-check"></i>
-            </ng-template>
-    </p-image>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <p-image 
-        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-        [preview]="true" 
-        alt="Image" 
-        width="100%">
-            <ng-template pTemplate="indicator">
-                <i class="pi pi-check"></i>
-            </ng-template>
-    </p-image>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <p-image 
-        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-        [preview]="true" 
-        alt="Image" 
-        width="100%">
-            <ng-template pTemplate="indicator">
-                <i class="pi pi-check"></i>
-            </ng-template>
-    </p-image>
+<section class="hero-section1 pt-5">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container pt-5">
+      <div class="text-center">
+          <h1 class="hero-title pb-2">أعمالنا</h1>
+          <a class="btn btn-primary mt-5" href="tel:+966533927072">
+              <i class="fas fa-phone-alt"></i> اتصل بنا الآن
+          </a>
       </div>
   </div>
+</section>
+
+<div class="container portfolio-section">
+  <div class="portfolio-filter">
+    <button (click)="filterItems('all')" [class.active]="selectedFilter === 'all'">الكل</button>
+    <button (click)="filterItems('tents-and-shades')" [class.active]="selectedFilter === 'tents-and-shades'">مظلات و شلالات</button>
+    <button (click)="filterItems('artificial-turf-installation')" [class.active]="selectedFilter === 'artificial-turf-installation'">تركيب عشب جداري</button>
+    <button (click)="filterItems('decorations')" [class.active]="selectedFilter === 'decorations'">ديكورات صناعية</button>
+    <button (click)="filterItems('palm-planting')" [class.active]="selectedFilter === 'palm-planting'">زراعة نخيل</button>
+    <button (click)="filterItems('irrigation-networks-installation')" [class.active]="selectedFilter === 'irrigation-networks-installation'">تركيب شبكات ري</button>
+    <button (click)="filterItems('supply-orders')" [class.active]="selectedFilter === 'supply-orders'">طلبات توريد</button>
+    <button (click)="filterItems('synthetic-grass-installation')" [class.active]="selectedFilter === 'synthetic-grass-installation'">تركيبات عشب صناعي</button>
+  </div>
+
+  <div class="row">
+    <div *for="let item of filteredItems" class="col-md-4 portfolio-item" [class]="item.category">
+      <div class="card">
+        <div *for="let image of item.images">
+          <img [src]="image" [alt]="item.title" width="100%" height="200px" class="card-img-top">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <a href="#" class="btn btn-primary">عرض المزيد</a>
+        </div>
+      </div>
     </div>
-    
+  </div>
+</div>
