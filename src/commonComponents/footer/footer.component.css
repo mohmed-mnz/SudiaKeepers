@@ -23,6 +23,7 @@ li {
   transition: color 0.3s ease, font-weight 0.3s ease;
   color: #74AC6A;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .nav-link {

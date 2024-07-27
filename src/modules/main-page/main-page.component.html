@@ -19,9 +19,10 @@
             <p class="description-text">{{item.description}}</p>
 
           </div>
-          <button class="btn-gallary p-4 m-2">
-            اتصل بنا الان
-          </button>
+          <a href="tel:+966533927072"  class="btn-gallary p-4 m-2" >
+            اتصل بنا
+        </a>
+          
         </div>
       </ng-template>
     </p-galleria>
@@ -616,7 +617,7 @@
   <slide *ngFor="let review of userReviews">
     <div class="opinion-item">
       <div class="centered-text">
-        <h1 class="pt-4" style="color: #000; font-size: 3vmax;">{{review.name}}</h1>
+        <h1 class="pt-4" style="color: #FFEB3B; font-size: 3vmax;">{{review.name}}</h1>
         <p style="color: #fff;" class="description-text">{{review.opinion}}</p>
         <div class="rating-section">
           <mat-icon *ngFor="let star of [1,2,3,4,5]" [ngClass]="{'filled-star': star <= (review.rating ?? 0), 'empty-star': star > (review.rating ?? 0)}">star</mat-icon>
