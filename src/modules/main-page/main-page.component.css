@@ -1,6 +1,6 @@
 *{
   font-family: 'Cairo';
-  
+
 }
 mat-icon{
   font-family: 'Material Icons';
@@ -97,7 +97,7 @@ p{
 }
 
 .btn-gallary:hover{
-  background-color: rgba(255, 255, 255, 0.9); 
+  background-color: rgba(255, 255, 255, 0.9);
   color: rgb(77, 82, 82);
 }
 .header-icon {
@@ -222,7 +222,7 @@ p{
 .mycardWithHeader{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  
+
 }
 .mycardWithHeader:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -249,7 +249,7 @@ p{
 background-color: #529846;
 }
 .opinion-item {
-  
+
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
   border-radius: 8px;
   padding: 15px;
@@ -271,4 +271,115 @@ background-color: #529846;
   z-index: -1;
 
 
+}
+/* Base Styles (for larger screens) */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+.centered-text {
+  text-align: center;
+}
+.hero-section .hero-image {
+  width: 100%;
+  height: auto;
+}
+.mat-card-content p {
+  font-size: 1rem;
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5vmax;
+  }
+  .myh2 {
+    font-size: 1.8vmax;
+  }
+  .gallery-item img {
+    height: auto;
+  }
+  .gallery-container .btn-gallary {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .counter-item label {
+    font-size: 1rem;
+  }
+  .hero-section .hero-image {
+    height: auto;
+  }
+  .mat-card-content p {
+    font-size: 0.9rem;
+  }
+  .mat-card-footer .btn {
+    width: auto;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Devices (Phones, 576px and up) */
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 2vmax;
+  }
+  .myh2 {
+    font-size: 1.5vmax;
+  }
+  .gallery-item img {
+    height: auto;
+  }
+  .gallery-container .btn-gallary {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .centered-text h1 {
+    font-size: 4vmax;
+  }
+  .centered-text p {
+    font-size: 1rem;
+  }
+  .hero-section .hero-image {
+    height: auto;
+  }
+  .mat-card-content p {
+    font-size: 0.8rem;
+  }
+  .mat-card-footer .btn {
+    width: auto;
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small Devices (Phones in portrait mode, 400px and up) */
+@media (max-width: 400px) {
+  .header h1 {
+    font-size: 1.8vmax;
+  }
+  .myh2 {
+    font-size: 1.2vmax;
+  }
+  .gallery-item img {
+    height: auto;
+  }
+  .gallery-container .btn-gallary {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .centered-text h1 {
+    font-size: 3vmax;
+  }
+  .centered-text p {
+    font-size: 0.9rem;
+  }
+  .hero-section .hero-image {
+    height: auto;
+  }
+  .mat-card-content p {
+    font-size: 0.7rem;
+  }
+  .mat-card-footer .btn {
+    width: auto;
+    font-size: 0.6rem;
+  }
 }
