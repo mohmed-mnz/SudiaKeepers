@@ -613,14 +613,27 @@
       <div class="col-md-3 col-sm-12"></div>
     </div>
     <carousel [interval]="3000" [noPause]="true" [noWrap]="false">
-      <slide *ngFor="let review of userReviews">
-        <div class="opinion-item">
-          <div class="centered-text">
-            <h1 class="p-4" style="color: #000;font-size:5vmax;">{{review.name}}</h1>
-            <p style="color: #fff;" class="description-text">{{review.opinion}}</p>
-          </div>
-
+  <slide *ngFor="let review of userReviews">
+    <div class="opinion-item">
+      <div class="centered-text">
+        <h1 class="pt-4" style="color: #000; font-size: 3vmax;">{{review.name}}</h1>
+        <p style="color: #fff;" class="description-text">{{review.opinion}}</p>
+        <div class="rating-section">
+          <mat-icon *ngFor="let star of [1,2,3,4,5]" [ngClass]="{'filled-star': star <= (review.rating ?? 0), 'empty-star': star > (review.rating ?? 0)}">star</mat-icon>
         </div>
-      </slide>
-    </carousel>
+      </div>
+    </div>
+  </slide>
+</carousel>
+
+    
   </div>
+
+
+
+
+
+
+
+  
+
