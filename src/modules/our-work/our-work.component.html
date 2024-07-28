@@ -1,81 +1,32 @@
-<div class="  container-fluid p-4 services-section"style='background-color:#eee'>
-    <div class="row" style="margin-top:10vh;">
-      <div class="col-md-3 col-sm-12"></div>
-      <div class="col-6 text-center ">
-        <h1 style="color: rgb(75, 158, 61);;"> أعمالنا</h1>
-      </div>a
-      <div class="col-md-3 col-sm-12"></div>
-    </div>
-    
-      <div class="row p-5" >
-        <div class="col-md-4 col-sm-12">
-          <p-image 
-          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-          [preview]="true" 
-          alt="Image" 
-          width="100%">
-              <ng-template pTemplate="indicator">
-                  <i class="pi pi-check"></i>
-              </ng-template>
-      </p-image>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <p-image 
-          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-          [preview]="true" 
-          alt="Image" 
-          width="100%">
-              <ng-template pTemplate="indicator">
-                  <i class="pi pi-check"></i>
-              </ng-template>
-      </p-image>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <p-image 
-          src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-          [preview]="true" 
-          alt="Image" 
-          width="100%">
-              <ng-template pTemplate="indicator">
-                  <i class="pi pi-check"></i>
-              </ng-template>
-      </p-image>
-        </div>
-    </div>
-    <div class="row p-5">
-      <div class="col-md-4 col-sm-12">
-        <p-image 
-        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-        [preview]="true" 
-        alt="Image" 
-        width="100%">
-            <ng-template pTemplate="indicator">
-                <i class="pi pi-check"></i>
-            </ng-template>
-    </p-image>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <p-image 
-        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-        [preview]="true" 
-        alt="Image" 
-        width="100%">
-            <ng-template pTemplate="indicator">
-                <i class="pi pi-check"></i>
-            </ng-template>
-    </p-image>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <p-image 
-        src="./../assets/خدمة-تنسيق-الحدائق-أبشر-لتنسيق-الحدائق-في-السعودية.jpg" 
-        [preview]="true" 
-        alt="Image" 
-        width="100%">
-            <ng-template pTemplate="indicator">
-                <i class="pi pi-check"></i>
-            </ng-template>
-    </p-image>
+<section class="hero-section1 pt-5">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container pt-5">
+      <div class="text-center">
+          <h1 class="hero-title pb-2">أعمالنا</h1>
+          <a class="btn btn-primary mt-5" href="tel:+966533927072">
+              <i class="fas fa-phone-alt"></i> اتصل بنا الآن
+          </a>
       </div>
   </div>
+</section>
+
+<div class="filter-buttons">
+  <button *ngFor="let category of categories"
+          class="filter-button"
+          [class.active]="selectedFilter === category.category"
+          (click)="filterItems(category.category)">
+    {{ category.name }}
+  </button>
+  <button class="filter-button" [class.active]="selectedFilter === 'all'" (click)="filterItems('all')">الكل</button>
+</div>
+
+<div class="portfolio-grid">
+  <div class="portfolio-item" *ngFor="let item of filteredImages" @fadeInOut>
+    <div class="image-container">
+      <img [src]="item.image" alt="Portfolio Image">
+      <div class="overlay">
+        <div class="text">{{ item.description }}</div>
+      </div>
     </div>
-    
+  </div>
+</div>
