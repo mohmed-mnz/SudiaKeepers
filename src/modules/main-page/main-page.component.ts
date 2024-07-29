@@ -25,7 +25,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ImageModule,
     CardModule,
     ButtonModule,
-    CarouselModule
+    CarouselModule,
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
