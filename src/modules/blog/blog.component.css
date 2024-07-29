@@ -1,0 +1,17 @@
+.container {
+    margin-top: 30vh;
+  }
+  
+  .blog-section {
+    margin-bottom: 20px;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  p {
+    line-height: 1.6;
+    font-size: 1.3rem;
+  }
+  

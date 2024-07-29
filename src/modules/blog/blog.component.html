@@ -1,1 +1,30 @@
-<p>blog works!</p>
+
+
+<div class="container" >
+    <div class="row" style="margin-top: 20vh;">
+      <div class="col-md-8">
+        <div *ngFor="let section of sections" [id]="section.id" class="blog-section">
+          <div class="d-flex justify-content-center m-2">
+            <h1 class=" p-3"style="display: block;font-size: 2rem; font-weight:bold"> {{section.title}} </h1>
+          </div>
+          <img [src]="section.itemImageSrc" width="100%" height="50%"/>
+          <p>{{ section.content }}</p>
+          <div class="d-flex justify-content-center m-2">
+            <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(section.url)">المزيد</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <input type="text" [(ngModel)]="searchText" placeholder="Search sections" class="form-control mb-3" />
+        <ul class="list-group">
+          <li 
+            *ngFor="let section of filteredSections" 
+            class="list-group-item" 
+            (click)="scrollToSection(section.id)">
+            {{ section.title }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
