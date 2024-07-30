@@ -352,10 +352,14 @@ font-size: medium;
 .mat-card-content p {
   font-size: 1rem;
 }
+.centered-text h1 {
+  font-size: 5rem;
+  color: #fff;
+}
 
 @media (max-width: 768px) {
   .header h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
 
   .myh2 {
@@ -391,7 +395,7 @@ font-size: medium;
 
 @media (max-width: 576px) {
   .header h1 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .myh2 {
@@ -408,7 +412,7 @@ font-size: medium;
   }
 
   .centered-text h1 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .centered-text p {
@@ -448,7 +452,7 @@ font-size: medium;
   }
 
   .centered-text h1 {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 
   .centered-text p {
@@ -985,3 +989,16 @@ font-size: medium;
         font-size: 0.75rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
