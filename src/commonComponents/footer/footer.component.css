@@ -3,7 +3,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1vmax;
+  font-size: 1rem;
 }
 
 .counter-background {
@@ -27,11 +27,10 @@ li {
 }
 
 .nav-link {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
   color: #333;
   position: relative;
-  padding: 12px 16px;
   text-decoration: none;
 }
 
@@ -64,7 +63,7 @@ li {
 
 p {
   line-height: 1.6;
-  font-size: 1.3vmax;
+  font-size: 1.3rem;
 }
 
 .myh {

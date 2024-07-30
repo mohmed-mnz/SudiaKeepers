@@ -15,13 +15,30 @@
         </div>
       </div>
       <div class="col-md-4">
-        <input type="text" [(ngModel)]="searchText" placeholder="Search sections" class="form-control mb-3" />
+       
+        <!-- <input type="text" [(ngModel)]="searchText" placeholder="بحث..... " class="form-control mb-3 fas fa-search" /> -->
+       
+        <p-iconField iconPosition="left" >
+          <p-inputIcon styleClass="pi pi-search" />
+          <input type="text" pInputText placeholder="بحث....." />
+        </p-iconField>
         <ul class="list-group">
           <li 
             *ngFor="let section of filteredSections" 
             class="list-group-item" 
             (click)="scrollToSection(section.id)">
-            {{ section.title }}
+            <div class="row">
+              <div class="col-4">
+                <img [src]="section.itemImageSrc" width="100%" height="100%"/>
+              </div>
+              <div class="col-8">
+                <p> {{ section.title }}</p>
+               <span>التفاصيل والانواع</span>
+
+              </div>
+            </div>
+       
+         
           </li>
         </ul>
       </div>

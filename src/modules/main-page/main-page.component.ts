@@ -130,3 +130,5 @@ export class MainPageComponent implements OnInit {
     window.open(imageUrl, '_blank');
   }
 }
+
+

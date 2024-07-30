@@ -3,12 +3,18 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
   imports: [FormsModule,
-    CommonModule
+    CommonModule,
+    InputTextModule,
+    InputIconModule,
+    IconFieldModule
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
