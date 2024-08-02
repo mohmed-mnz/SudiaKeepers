@@ -1,14 +1,26 @@
 <section class="hero-section1 pt-5">
   <div class="hero-overlay"></div>
   <div class="hero-content container pt-5">
-      <div class="text-center">
-          <h1 class="hero-title pb-2">أعمالنا</h1>
-          <a class="btn btn-primary mt-5" href="tel:+966533927072">
-              <i class="fas fa-phone-alt"></i> اتصل بنا الآن
-          </a>
-      </div>
+    <div class="text-center">
+      <h1 class="hero-title pb-2">أعمالنا</h1>
+      <a class="btn btn-primary mt-5" href="tel:+966533927072">
+        <i class="fas fa-phone-alt"></i> اتصل بنا الآن
+      </a>
+    </div>
   </div>
 </section>
+
+
+
+<section class="highlight-section">
+  <div class="highlight-content container text-center">
+    <h2 class="highlight-title">استكشف أعمالنا الرائعة</h2>
+    <p class="highlight-description">
+      في <strong>بستان الخليج</strong>، نقدم لك مجموعة متنوعة من المشاريع التي تعكس خبرتنا وإبداعنا في مجال تصميم وتنسيق الحدائق. من تركيب العشب الصناعي إلى تصميم شلالات المياه، نحن ملتزمون بتقديم أفضل الحلول التي تناسب احتياجاتك وتلبي توقعاتك. استعرض مشاريعنا المميزة واكتشف كيف يمكننا تحويل مساحاتك الخاصة إلى ملاذات جميلة وعملية. نحن نؤمن أن كل مشروع هو فرصة لإظهار التميز والجودة التي نقدمها. دعنا نساعدك في تحقيق رؤيتك بلمساتنا الفنية الفريدة وخبراتنا الواسعة. اتصل بنا اليوم لنبدأ رحلة تحويل أفكارك إلى واقع ملموس.
+    </p>
+  </div>
+</section>
+
 
 <div class="filter-buttons">
   <button *ngFor="let category of categories"
@@ -19,12 +31,15 @@
   </button>
   <button class="filter-button" [class.active]="selectedFilter === 'all'" (click)="filterItems('all')">الكل</button>
 </div>
-
 <div class="portfolio-grid">
   <div class="portfolio-item" *ngFor="let item of filteredImages" @fadeInOut>
     <div class="image-container">
-      <img [src]="item.image" alt="Portfolio Image">
-      <div class="overlay">
+      <div class="spinner" *ngIf="!item.loaded"></div>
+      <img [src]="item.url"
+           (load)="item.loaded = true"
+           (error)="item.loaded = true"
+           alt="Portfolio Image">
+      <div class="overlay" *ngIf="item.loaded">
         <div class="text">{{ item.description }}</div>
       </div>
     </div>
