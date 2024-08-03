@@ -34,7 +34,7 @@ h1{
 }
 .gallery-wrapper {
   margin-top: 10vh;
-  height: 90vh; /* Adjust based on your navbar height */
+  height: 90vh;
 }
 
 .galleria-item {
@@ -48,13 +48,13 @@ h1{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(5px); /* Initial blur effect */
+  filter: blur(5px);
   transition: filter 0.3s ease-in-out;
-  animation: zoomOut 10s ease-in-out infinite; /* Add animation to the image */
+  animation: zoomOut 10s ease-in-out infinite;
 }
 
 .galleria-item:hover .galleria-image {
-  filter: brightness(40%); /* Apply brightness filter on hover */
+  filter: brightness(40%);
 }
 
 .centered-text {
@@ -99,10 +99,10 @@ h1{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 30%; /* Adjust width as needed */
-    transition: background-color 1s ease-in-out; /* Adjust the duration and easing as needed */
+  width: 30%;
+    transition: background-color 1s ease-in-out;
   }
-  
+
   .btn-gallery:hover {
     background-color: rgba(38, 161, 75, 0.6);
   }
@@ -171,7 +171,7 @@ h1{
       padding: 0.5rem 1rem;
   }
 }
-
+/*About Us Section*/
 .hero-content h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -266,7 +266,7 @@ font-size: medium;
 .hero-image-wrapper:hover .hero-image-overlay {
   opacity: 0.5;
 }
-
+/*end*/
 .counter-container {
   background-color: rgb(75, 158, 61);
   padding: 20px;
@@ -607,391 +607,390 @@ font-size: medium;
 
 
 /*the second section*/
-    .services-section {
-        font-family: 'Cairo', sans-serif;
-        padding: 50px 0;
-        text-align: center;
-        background-color: #ffffff;
-    }
+.services-section {
+  font-family: 'Cairo', sans-serif;
+  padding: 50px 0;
+  text-align: center;
+  background-color: #ffffff;
+}
 
-    .hero-content {
-        margin-bottom: 50px;
-    }
+.hero-content {
+  margin-bottom: 50px;
+}
 
-    .service-card {
-        background-color: #fff;
-        border-radius: 20px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        margin-bottom: 30px;
-        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-        width: 100%;
-        max-width: 700px;
-        margin: 0 auto 30px;
-    }
+.service-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
 
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
 
-    .card-image {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-    }
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
 
-    .card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease-in-out;
-    }
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
 
-    .service-card:hover .card-image img {
-        transform: scale(1.1);
-    }
+.service-card:hover .card-image img {
+  transform: scale(1.1);
+}
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 
-    .service-card:hover .overlay {
-        opacity: 0;
-    }
+.service-card:hover .overlay {
+  opacity: 0;
+}
 
-    .card-content {
-        padding: 40px;
-    }
+.card-content {
+  padding: 40px;
+}
 
-    .card-title {
-        font-size: 28px;
-        margin-bottom: 25px;
-    }
+.card-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
 
-    .card-description {
-        font-size: 20px;
-        margin-bottom: 30px;
-        color: #444;
-        line-height: 1.8;
-    }
+.card-description {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #444;
+  line-height: 1.8;
+}
 
-    .btn-primary {
-        background-color: #468516;
-        color: #fff;
-        border: none;
-        padding: 14px 35px;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: background-color 0.4s ease-in-out;
-        font-size: 18px;
-    }
+.btn-primary {
+  background-color: #468516;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+  font-size: 18px;
+}
 
-    .btn-primary:hover {
-        background-color: #52e53b;
-    }
+.btn-primary:hover {
+  background-color: #52e53b;
+}
 
-    /* Section three */
+/* Section three */
 
 
-  .pricing-section {
-     background: url('../../assets/counter_bg7.png') no-repeat center center fixed;
-     background-size: cover;
-     display: flex;
-     align-items: center;
-      padding: 60px 0;
-      color: #333;
-  }
+.pricing-section {
+background: url('../../assets/counter_bg7.png') no-repeat center center fixed;
+background-size: cover;
+display: flex;
+align-items: center;
+padding: 60px 0;
+color: #333;
+}
 
-  .pricing-section h2 {
-      font-size: 2.5rem;
-      color: #004d40;
-      margin-bottom: 20px;
-      font-weight: 700;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
+.pricing-section h2 {
+font-size: 2.5rem;
+color: #004d40;
+margin-bottom: 20px;
+font-weight: 700;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
-  .pricing-section p {
-      font-size: 1.25rem;
-      color: #00796b;
-      max-width: 600px;
-      margin: 0 auto 40px;
-  }
+.pricing-section p {
+font-size: 1.25rem;
+color: #00796b;
+max-width: 600px;
+margin: 0 auto 40px;
+}
 
-  .pricing-card {
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      background: #ffffff;
-      border: none;
-      text-align: center;
-      padding: 30px;
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto 30px;
-  }
+.pricing-card {
+border-radius: 20px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+background: #ffffff;
+border: none;
+text-align: center;
+padding: 30px;
+width: 100%;
+max-width: 320px;
+margin: 0 auto 30px;
+}
 
-  .pricing-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  }
+.pricing-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
 
-  .icon-container {
-      background: #004d40;
-      color: #ffffff;
-      border-radius: 50%;
-      padding: 20px;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-  }
+.icon-container {
+background: #004d40;
+color: #ffffff;
+border-radius: 50%;
+padding: 20px;
+width: 100px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 20px;
+}
 
-  .pricing-card h5 {
-      font-size: 1.5rem;
-      color: #004d40;
-      margin-bottom: 15px;
-      font-weight: 700;
-  }
+.pricing-card h5 {
+font-size: 1.5rem;
+color: #004d40;
+margin-bottom: 15px;
+font-weight: 700;
+}
 
-  .pricing-card .price {
-      font-size: 2.5rem;
-      color: #004d40;
-      font-weight: 700;
-      margin-bottom: 20px;
-  }
+.pricing-card .price {
+font-size: 2.5rem;
+color: #004d40;
+font-weight: 700;
+margin-bottom: 20px;
+}
 
-  .pricing-card ul li {
-      font-size: 1.1rem;
-      color: #004d40;
-      margin-bottom: 10px;
-  }
+.pricing-card ul li {
+font-size: 1.1rem;
+color: #004d40;
+margin-bottom: 10px;
+}
 
-  .btn-primary {
-      background: #004d40;
-      border-color: #004d40;
-      border-radius: 50px;
-      padding: 12px 30px;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: background 0.4s, transform 0.4s;
-  }
+.btn-primary {
+background: #004d40;
+border-color: #004d40;
+border-radius: 50px;
+padding: 12px 30px;
+font-size: 1rem;
+font-weight: 600;
+transition: background 0.4s, transform 0.4s;
+}
 
-  .btn-primary:hover {
-      background: #00796b;
-      border-color: #00796b;
-      transform: scale(1.05);
-  }
+.btn-primary:hover {
+background: #00796b;
+border-color: #00796b;
+transform: scale(1.05);
+}
 
-  .basic-bundle {
-      border: 2px solid #b9fbc0;
-  }
+.basic-bundle {
+border: 2px solid #b9fbc0;
+}
 
-  .standard-bundle {
-      border: 2px solid #a5d6a7;
-  }
+.standard-bundle {
+border: 2px solid #a5d6a7;
+}
 
-  .premium-bundle {
-      border: 2px solid #004d40;
-  }
+.premium-bundle {
+border: 2px solid #004d40;
+}
 
-  .ultimate-bundle {
-      border: 2px solid #003d33;
-  }
+.ultimate-bundle {
+border: 2px solid #003d33;
+}
 .pricing-card.selected {
-  border: 2px solid #004d40;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+border: 2px solid #004d40;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .pricing-card:not(.selected):hover {
-  border: 2px solid #00796b;
-  background: #e8f5e9;
+border: 2px solid #00796b;
+background: #e8f5e9;
 }
 @media (max-width: 1200px) {
-    .hero-content {
-        margin-bottom: 25px;
-    }
+.hero-content {
+  margin-bottom: 25px;
+}
 
-    .service-card {
-        margin-bottom: 25px;
-    }
+.service-card {
+  margin-bottom: 25px;
+}
 
-    .card-image {
-        height: 180px;
-    }
+.card-image {
+  height: 180px;
+}
 
-    .card-title {
-        font-size: 22px;
-    }
+.card-title {
+  font-size: 22px;
+}
 
-    .card-description {
-        font-size: 15px;
-    }
+.card-description {
+  font-size: 15px;
+}
 
-    .pricing-section h2 {
-        font-size: 1.875rem;
-    }
+.pricing-section h2 {
+  font-size: 1.875rem;
+}
 
-    .pricing-section p {
-        font-size: 1.1rem;
-    }
+.pricing-section p {
+  font-size: 1.1rem;
+}
 
-    .pricing-card h5 {
-        font-size: 1.125rem;
-    }
+.pricing-card h5 {
+  font-size: 1.125rem;
+}
 
-    .pricing-card .price {
-        font-size: 1.875rem;
-    }
+.pricing-card .price {
+  font-size: 1.875rem;
+}
 
-    .pricing-card ul li {
-        font-size: 0.95rem;
-    }
+.pricing-card ul li {
+  font-size: 0.95rem;
+}
 }
 
 @media (max-width: 992px) {
-    .hero-content {
-        margin-bottom: 20px;
-    }
+.hero-content {
+  margin-bottom: 20px;
+}
 
-    .service-card {
-        margin-bottom: 20px;
-    }
+.service-card {
+  margin-bottom: 20px;
+}
 
-    .card-image {
-        height: 160px;
-    }
+.card-image {
+  height: 160px;
+}
 
-    .card-title {
-        font-size: 20px;
-    }
+.card-title {
+  font-size: 20px;
+}
 
-    .card-description {
-        font-size: 14px;
-    }
+.card-description {
+  font-size: 14px;
+}
 
-    .pricing-section h2 {
-        font-size: 1.75rem;
-    }
+.pricing-section h2 {
+  font-size: 1.75rem;
+}
 
-    .pricing-section p {
-        font-size: 1.05rem;
-    }
+.pricing-section p {
+  font-size: 1.05rem;
+}
 
-    .pricing-card h5 {
-        font-size: 1rem;
-    }
+.pricing-card h5 {
+  font-size: 1rem;
+}
 
-    .pricing-card .price {
-        font-size: 1.75rem;
-    }
+.pricing-card .price {
+  font-size: 1.75rem;
+}
 
-    .pricing-card ul li {
-        font-size: 0.9rem;
-    }
+.pricing-card ul li {
+  font-size: 0.9rem;
+}
 }
 
 @media (max-width: 768px) {
-    .hero-content {
-        margin-bottom: 15px;
-    }
+.hero-content {
+  margin-bottom: 15px;
+}
 
-    .service-card {
-        margin-bottom: 15px;
-    }
+.service-card {
+  margin-bottom: 15px;
+}
 
-    .card-image {
-        height: 140px;
-    }
+.card-image {
+  height: 140px;
+}
 
-    .card-title {
-        font-size: 18px;
-    }
+.card-title {
+  font-size: 18px;
+}
 
-    .card-description {
-        font-size: 13px;
-    }
+.card-description {
+  font-size: 13px;
+}
 
-    .pricing-section h2 {
-        font-size: 1.5rem;
-    }
+.pricing-section h2 {
+  font-size: 1.5rem;
+}
 
-    .pricing-section p {
-        font-size: 1rem;
-    }
+.pricing-section p {
+  font-size: 1rem;
+}
 
-    .pricing-card h5 {
-        font-size: 0.875rem;
-    }
+.pricing-card h5 {
+  font-size: 0.875rem;
+}
 
-    .pricing-card .price {
-        font-size: 1.5rem;
-    }
+.pricing-card .price {
+  font-size: 1.5rem;
+}
 
-    .pricing-card ul li {
-        font-size: 0.85rem;
-    }
+.pricing-card ul li {
+  font-size: 0.85rem;
+}
 }
 
 @media (max-width: 576px) {
-    .hero-content {
-        margin-bottom: 10px;
-    }
+.hero-content {
+  margin-bottom: 10px;
+}
 
-    .service-card {
-        margin-bottom: 10px;
-    }
+.service-card {
+  margin-bottom: 10px;
+}
 
-    .card-image {
-        height: 120px;
-    }
+.card-image {
+  height: 120px;
+}
 
-    .card-title {
-        font-size: 16px;
-    }
+.card-title {
+  font-size: 16px;
+}
 
-    .card-description {
-        font-size: 12px;
-    }
+.card-description {
+  font-size: 12px;
+}
 
-    .pricing-section h2 {
-        font-size: 1.25rem;
-    }
+.pricing-section h2 {
+  font-size: 1.25rem;
+}
 
-    .pricing-section p {
-        font-size: 0.875rem;
-    }
+.pricing-section p {
+  font-size: 0.875rem;
+}
 
-    .pricing-card h5 {
-        font-size: 0.75rem;
-    }
+.pricing-card h5 {
+  font-size: 0.75rem;
+}
 
-    .pricing-card .price {
-        font-size: 1.25rem;
-    }
+.pricing-card .price {
+  font-size: 1.25rem;
+}
 
-    .pricing-card ul li {
-        font-size: 0.75rem;
-    }
+.pricing-card ul li {
+  font-size: 0.75rem;
+}
 }
 
 @media (max-width: 400px) {
-    .btn-primary {
-        padding: 10px 15px;
-        font-size: 0.75rem;
-    }
+.btn-primary {
+  padding: 10px 15px;
+  font-size: 0.75rem;
 }
-
+}
 
 
 
