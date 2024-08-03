@@ -4,9 +4,9 @@ html, body {
    }
  body {
    margin: 0;
-    font-family: 'Cairo', 
-    "Helvetica Neue", sans-serif;
- background-color: #eee;
+   font-family: 'Cairo','sans-serif';
+    background-color: #eee;
+    scroll-behavior: smooth;
 
  }
 
@@ -55,6 +55,7 @@ background-color: #fff !important;
   .p-ripple .p-element .p-galleria-item-next .p-galleria-item-nav .p-link button{
     display: none !important;
     }
+
 
     chevronrighticon{
       display: none !important;
