@@ -29,7 +29,9 @@ p {
   line-height: 1.6;
   font-size: 1.3rem;
 }
-
+h1{
+  line-height: 1;
+}
 .gallery-wrapper {
   margin-top: 10vh;
   height: 90vh; /* Adjust based on your navbar height */
@@ -989,6 +991,15 @@ font-size: medium;
         font-size: 0.75rem;
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 

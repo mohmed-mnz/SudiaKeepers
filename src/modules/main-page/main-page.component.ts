@@ -11,6 +11,7 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { TestimonialsComponent } from '../../commonComponents/Testimonials/Testimonials.component';
 @Component({
   selector: 'app-main-page',
   standalone: true,
@@ -26,6 +27,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     CardModule,
     ButtonModule,
     CarouselModule,
+    TestimonialsComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
@@ -43,6 +45,7 @@ export class MainPageComponent implements OnInit {
     { breakpoint: '560px', numVisible: 1 }
   ];
   userReviews = [
+    
     { name: 'سارة من جدة', opinion: 'شركة بستان الخليج لتنسيق الحدائق قامت بتحويل حديقتي إلى واحة خضراء جميلة. لقد كانوا محترفين وسريعين في تنفيذ العمل، وأنا سعيدة جداً بالنتيجة النهائية.',rating: 4},
     { name: 'أحمد من الرياض', opinion: 'فريق شركة بستان الخليج كان مذهلاً! قاموا بتصميم حديقة أمام منزلي بطريقة تفوق توقعاتي. أنصح بهم بشدة لكل من يبحث عن تنسيق حدائق مميز.' ,rating: 5},
     { name: 'ليلى من الدمام', opinion: 'لقد استفدت من خدمات شركة بستان الخليج لتنسيق الحديقة الخلفية لمنزلي. كانت الخدمة ممتازة والأسعار معقولة جداً. سأعود إليهم بالتأكيد لأي أعمال تنسيق مستقبلية.',rating: 3 },
