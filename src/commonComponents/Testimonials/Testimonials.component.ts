@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, Renderer2 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import $ from 'jquery';
 
 @Component({
@@ -8,7 +9,8 @@ import $ from 'jquery';
   standalone: true,
   imports: [
     MatIconModule,
-    CommonModule
+    CommonModule,
+    MdbCarouselModule 
   ],
   templateUrl: './Testimonials.component.html',
   styleUrls: ['./Testimonials.component.css']

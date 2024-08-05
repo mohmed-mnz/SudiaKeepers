@@ -60,3 +60,11 @@ background-color: #fff !important;
     chevronrighticon{
       display: none !important;
     }
+
+  .rating-section{
+      display: block !important;
+    }
+
+    .p-progressbar .p-progressbar-value{
+      background: #FFB900 !important;
+    } 

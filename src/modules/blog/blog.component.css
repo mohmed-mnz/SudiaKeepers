@@ -25,3 +25,43 @@
     border-left: 1px solid #ccc;
     height: 600px;
   }
+
+  .btn{
+    background-color: transparent;
+    border: 1px solid #45A049;
+    color: #45A049;
+
+  }
+  .btn:hover{
+    background-color: #45A049;
+    color: #fff;
+  }
+
+
+  .rating-section {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .rating-section .mat-icon {
+    font-size: 25px;
+    color: #FFB900; /* Yellow color for filled stars */
+  }
+  
+  .rating-section .empty-star {
+    color: #000; /* Gray color for empty stars */
+  }
+
+  li{
+    list-style: none;
+  }
+
+  .nav-link{
+    color: #272222;
+    font-size: 1.3rem;
+  }
+
+  .nav-link:hover{
+    color: #45A049;
+  }

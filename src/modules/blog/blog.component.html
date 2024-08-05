@@ -1,28 +1,31 @@
 
 
 <div class="container" >
+  
     <div class="row" style="margin-top: 20vh;">
       <div class="col-md-8">
       
         <div *ngFor="let section of sections" [id]="section.id" class="blog-section">
+          
           <h3  class="d-flex justify-content-center m-2" style="color: #74AD6B;" >معلومات تهمك لتنسيق الحدائق</h3>
           <div class="d-flex justify-content-center m-2">
             <h1 class=" p-3"style="display: block;font-size: 2rem; font-weight:bold"> {{section.title}} </h1>
           </div>
           <img [src]="section.itemImageSrc" width="100%" height="50%"/>
-          <p style="color: #353535;">{{ section.content }}</p>
+          <p  class="p-3" style="color: #353535;">{{ section.content }}</p>
           <div class="d-flex justify-content-center m-2">
-            <button class="btn btn-primary" style="width: 100px;" (click)="openNewTab(section.url)">المزيد</button>
+            <button class="btn" style="width: 100px;" (click)="openNewTab(section.url)">المزيد</button>
           </div>
+          <hr style="color: #74AD6B;">
         </div>
       </div>
+     
 <div class="col-md-1">
   <div class="vl"></div>
 </div>
       <div class="col-md-3">
-        <!-- <input type="text" [(ngModel)]="searchText" placeholder="بحث..... " class="form-control mb-3 fas fa-search" /> -->
-       
-        <p-iconField iconPosition="left" >
+        <div class="row">
+          <p-iconField iconPosition="left" >
           <p-inputIcon styleClass="pi pi-search" />
           <input type="text" pInputText placeholder="بحث....." [(ngModel)]="searchText"/>
         </p-iconField>
@@ -32,20 +35,57 @@
             class="list-group-item" 
             (click)="scrollToSection(section.id)">
             <div class="row">
-              <div class="col-4">
+              <div class="col-lg-4 col-md-12">
                 <img [src]="section.itemImageSrc" width="100%" height="100%"/>
               </div>
-              <div class="col-8">
+              <div class="col-lg-8 col-md-12  ">
                 <p> {{ section.title }}</p>
                <span>التفاصيل والانواع</span>
-
+            
               </div>
             </div>
        
-         
+           
           </li>
+        
         </ul>
       </div>
+      <div class="row">
+        <h3  class="d-flex justify-content-center mt-5" style="color: #151614;font-size: 1.5rem;" > تقييمات العملاء </h3>
+        <div class="rating-section mb-2">
+          <mat-icon *ngFor="let star of [1,2,3,4,5]" [ngClass]="{'filled-star': star <= 4, 'empty-star': star > 4}">star</mat-icon>
+        
+        </div>
+        <span style="font-weight: bold;">ممتاز</span>
+        <p-progressBar class="p-2" [value]="80" />
+        <span  style="font-weight: bold;">جيد</span>
+        <p-progressBar class="p-2"  [value]="15" />
+        <span  style="font-weight: bold;">سييء</span>
+        <p-progressBar class="p-2"  [value]="5" />
+      </div>
+      <div class="row">
+        <h3 class="d-flex justify-content-center mt-5" style="color: #151614; font-size: 1.5rem;">الاكثر قراءة</h3>
+        <hr style="color: #FFB900; opacity: 0.5;">
+        <ul>
+          <li><a class="nav-link p-3"  routerLink="/unnatural-grass" routerLinkActive="active-link">زرع صناعى</a></li>
+          <hr>
+          <li><a class="nav-link p-3" routerLink="/fountains" routerLinkActive="active-link">تركيب وتصميم نوافير</a></li>
+          <hr>
+          <li><a class="nav-link p-3" routerLink="/agriculturalDecoration" routerLinkActive="active-link">تنسيق الحدائق</a></li>
+          <hr>
+          <li><a class="nav-link p-3" routerLink="/natural-grass" routerLinkActive="active-link">زرع طبيعى</a></li>
+          <hr>
+          <li><a class="nav-link p-3" routerLink="/pestControl" routerLinkActive="active-link">ابادة الحشرات</a></li>
+          <hr>
+          <li><a class="nav-link p-3" routerLink="/wallGrass" routerLinkActive="active-link">عشب جدارى</a></li>
+        </ul>
+      </div>
+      
     </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <img src="assets/5864118342326010013.jpg" width="100%">
   </div>
   

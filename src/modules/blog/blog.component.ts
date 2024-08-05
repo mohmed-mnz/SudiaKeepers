@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { MatIconModule } from '@angular/material/icon';
+import { ProgressBarModule } from 'primeng/progressbar';
 
 @Component({
   selector: 'app-blog',
@@ -15,7 +17,10 @@ import { InputTextModule } from 'primeng/inputtext';
     InputTextModule,
     InputIconModule,
     IconFieldModule,
-    RouterOutlet
+    RouterOutlet,
+    RouterModule,
+    MatIconModule,
+    ProgressBarModule
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
