@@ -69,7 +69,10 @@ li{
     background-color: #219150;
     transform: scale(1.05);
   }
-  
+  .hero-image{
+    height: 80vh;
+    width: 30vw;
+} 
   @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
@@ -82,6 +85,11 @@ li{
     .hero-description {
         font-size: 1rem;
     }
+    .hero-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   
   .hero-section1:hover .hero-overlay {
@@ -89,8 +97,3 @@ li{
   }
   
   
-  
-  .hero-image{
-      height: 80vh;
-      width: 30vw;
-  }

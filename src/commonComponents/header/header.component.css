@@ -188,3 +188,18 @@
     padding: 4px 8px;
   }
 }
+
+
+/* Ensure dropdown appears on hover */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Adjust the positioning of the dropdown to avoid issues with positioning */
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  margin-top: 0; /* Adjust as necessary */
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover{
+  color:#45A049 ;
+}
