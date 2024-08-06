@@ -1,3 +1,5 @@
+<!-- In your HTML file -->
+
 <nav class="navbar navbar-expand-lg navbar-light hero-navbar fixed-top" style="height: fit-content;">
   <div class="container">
     <a class="navbar-brand" routerLink="/">
@@ -7,19 +9,35 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto p-3">
         <li class="nav-item">
           <a class="nav-link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">الرئيسية</a>
         </li>
         <li class="nav-item">
-       <a class="nav-link" routerLink="/aboutus" routerLinkActive="active-link">من نحن</a>   
+          <a class="nav-link" routerLink="/aboutus" routerLinkActive="active-link">من نحن</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/ourwork" routerLinkActive="active-link">أعمالنا</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/ourservices" routerLinkActive="active-link">خدماتنا</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            خدماتنا
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item pl-3 pr-3" routerLink="/natural-grass" routerLinkActive="active-link">العشب الطبيعي</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/unnatural-grass" routerLinkActive="active-link">العشب الصناعي</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/treesAndFlowers" routerLinkActive="active-link">الأشجار والزهور</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/wallGrass" routerLinkActive="active-link">العشب الجداري</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/playgarden" routerLinkActive="active-link">تصميم الملاعب</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/grdenMaintence" routerLinkActive="active-link">صيانة الحدائق</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/agriculturalDecoration" routerLinkActive="active-link">الديكورات الزراعية</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/pergolas" routerLinkActive="active-link">البرجولات</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/fountains" routerLinkActive="active-link">النافورات</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/pestControl" routerLinkActive="active-link">مكافحة الآفات</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/Waterfall" routerLinkActive="active-link">الشلالات</a>
+            <a class="dropdown-item pl-3 pr-3" routerLink="/irrigationNetwork" routerLinkActive="active-link">شبكات الري</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/connectwithus" routerLinkActive="active-link">تواصل معنا</a>
@@ -29,14 +47,15 @@
         </li>
       </ul>
       <div class="navbar-buttons d-flex p-1">
-        <!-- <button class="btn custom-button primary-button">عرض أسعار</button> -->
         <a href="https://wa.me/966533927072" class="btn custom-button primary-button" target="_blank">
-           عرض   أسعار      </a>
-        <!-- <button class="btn custom-button secondary-button">اتصل بنا</button> -->
+          عرض أسعار
+        </a>
         <a href="tel:+966533927072" class="btn custom-button secondary-button">
           اتصل بنا
-      </a>
+        </a>
       </div>
     </div>
   </div>
 </nav>
+
+
