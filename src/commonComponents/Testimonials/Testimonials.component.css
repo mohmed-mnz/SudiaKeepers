@@ -1,70 +1,63 @@
-.carousel img {
-
-    border-radius: 50%;
-    margin-right: 1rem;
-    overflow: hidden;
-  }
-  .carousel-inner {
-    padding: 1em;
-  }
-  .rating-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .rating-section .mat-icon {
-    font-size: 24px;
-    color: #ffeb3b; /* Yellow color for filled stars */
-  }
-  
-  .rating-section .empty-star {
-    color: #e0e0e0; /* Gray color for empty stars */
-  }
-
-.image-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  
+/* Custom styles for the testimonial slider */
+.container-fluid.bg-body-tertiary {
+  background-color: #f8f9fa; /* Light grey background */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-  
-  @media screen and (min-width: 576px) {
-    .carousel-inner {
-      display: flex;
-      width: 90%;
-      margin-inline: auto;
-      padding: 1em 0;
-      overflow: hidden;
-    }
-    .carousel-item {
-      display: block;
-      margin-right: 0;
-      flex: 0 0 calc(100% / 2);
-    }
-  }
-  @media screen and (min-width: 768px) {
-    .carousel-item {
-      display: block;
-      margin-right: 0;
-      flex: 0 0 calc(100% / 3);
-    }
-  }
-  .carousel .card {
-    margin: 0 0.5em;
-    border: 0;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 3rem;
-    height: 3rem;
-    background-color: grey;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .card-text{
-    text-align: center;
-  }
+
+.myh2 {
+  color: #343a40; /* Dark text color */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.carousel {
+  margin-top: 30px;
+}
+
+.card {
+  border: none; /* Remove default border */
+  background-color: #ffffff; /* White background for cards */
+}
+
+.quotes {
+  color: #ff9800; /* Accent color for quote icon */
+  margin-bottom: 20px;
+}
+
+.rating-section mat-icon {
+  color: #ff9800; /* Star color */
+  font-size: 1.5rem; /* Increase star size */
+}
+
+.image-section img {
+  border-radius: 50%; /* Circular images */
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: cover; /* Ensure the image fits the circular shape */
+  margin-bottom: 20px;
+}
+
+.card-text {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #6c757d; /* Muted text color */
+}
+
+.card-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: #343a40; /* Dark text color */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #343a40; /* Dark background for control icons */
+  border-radius: 50%; /* Circular control icons */
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  color: #ffffff; /* White arrow icons */
+}
