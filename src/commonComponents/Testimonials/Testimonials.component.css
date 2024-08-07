@@ -1,70 +1,27 @@
-.carousel img {
-
-    border-radius: 50%;
-    margin-right: 1rem;
-    overflow: hidden;
-  }
-  .carousel-inner {
-    padding: 1em;
-  }
-  .rating-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .rating-section .mat-icon {
-    font-size: 24px;
-    color: #ffeb3b;
-  }
-
-  .rating-section .empty-star {
-    color: #e0e0e0;
-  }
-
-.image-section {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
+/* Custom styles for the testimonial slider */
+.container-fluid.bg-body-tertiary {
+  background-color: #f8f9fa; /* Light grey background */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-  @media screen and (min-width: 576px) {
-    .carousel-inner {
-      display: flex;
-      width: 90%;
-      margin-inline: auto;
-      padding: 1em 0;
-      overflow: hidden;
-    }
-    .carousel-item {
-      display: block;
-      margin-right: 0;
-      flex: 0 0 calc(100% / 2);
-    }
-  }
-  @media screen and (min-width: 768px) {
-    .carousel-item {
-      display: block;
-      margin-right: 0;
-      flex: 0 0 calc(100% / 3);
-    }
-  }
-  .carousel .card {
-    margin: 0 0.5em;
-    border: 0;
-  }
+.myh2 {
+  color: #343a40; /* Dark text color */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 3rem;
-    height: 3rem;
-    background-color: grey;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+.carousel {
+  margin-top: 30px;
+}
 
-  .card-text{
-    text-align: center;
-  }
+.card {
+  border: none; /* Remove default border */
+  background-color: #ffffff; /* White background for cards */
+}
+
+.quotes {
+  color: #ff9800; /* Accent color for quote icon */
+  margin-bottom: 20px;
+}
+
