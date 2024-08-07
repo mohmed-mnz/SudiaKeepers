@@ -12,23 +12,23 @@
     justify-content: center;
     margin-top: 10px;
   }
-  
+
   .rating-section .mat-icon {
     font-size: 24px;
-    color: #ffeb3b; /* Yellow color for filled stars */
+    color: #ffeb3b;
   }
-  
+
   .rating-section .empty-star {
-    color: #e0e0e0; /* Gray color for empty stars */
+    color: #e0e0e0;
   }
 
 .image-section {
   display: flex;
   justify-content: center;
   width: 100%;
-  
+
 }
-  
+
   @media screen and (min-width: 576px) {
     .carousel-inner {
       display: flex;
@@ -54,7 +54,7 @@
     margin: 0 0.5em;
     border: 0;
   }
-  
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 3rem;
@@ -64,7 +64,7 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  
+
   .card-text{
     text-align: center;
   }

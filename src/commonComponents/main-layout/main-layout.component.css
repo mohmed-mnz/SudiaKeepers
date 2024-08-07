@@ -1,25 +1,25 @@
 *{
     font-family: 'Cairo';
   }
-  
+
   .gallery-container {
     background-color: #eee;
     padding: 0;
     font-family: 'Cairo';
   }
-  
+
   .gallery-wrapper {
     margin-top: 10vh;
     height: 90vh; /* Adjust based on your navbar height */
   }
-  
+
   .galleria-item {
     position: relative;
     width: 100%;
     height: 90vh;
     overflow: hidden;
   }
-  
+
   .galleria-image {
     width: 100%;
     height: 100%;
@@ -28,11 +28,11 @@
     transition: filter 0.3s ease-in-out;
     animation: zoomOut 10s ease-in-out infinite; /* Add animation to the image */
   }
-  
+
   .galleria-item:hover .galleria-image {
     filter: none; /* Remove blur on hover */
   }
-  
+
   .centered-text {
     position: absolute;
     top: 30%;
@@ -44,7 +44,7 @@
     border-radius: 10px;
     width: 80%; /* Adjust width as needed */
   }
-  
+
   .description-text {
     color: white;
     font-size: 1.5rem;
@@ -54,7 +54,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
     font-family: 'Arial', sans-serif; /* Customize font as needed */
   }
-  
+
   @keyframes zoomOut {
     0% {
       transform: scale(1.2); /* Start from a larger scale */
@@ -63,8 +63,8 @@
       transform: scale(1); /* End at normal scale */
     }
   }
-  
-  
+
+
   .btn-gallary{
     width: 50%;
     background-color: transparent;
@@ -79,9 +79,9 @@
     text-align: center;
     width: 40%; /* Adjust width as needed */
   }
-  
+
   .btn-gallary:hover{
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
     color: rgb(77, 82, 82);
   }
   .header-icon {
@@ -94,7 +94,7 @@
     justify-content: center;
     margin-right: 16px;
   }
-  
+
   .mycard{
     border-radius: 10%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -104,8 +104,8 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: scale(1.03);
   }
-  
-  
+
+
 
 /*First Section*/
 .hero-section1 {
@@ -171,37 +171,37 @@
     transform: scale(1.05);
 }
 
-  
-  
-  
+
+
+
 
   @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
     }
-  
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-  
+
     .hero-description {
         font-size: 1rem;
     }
   }
-  
+
   .hero-section1:hover .hero-overlay {
     background: rgba(0, 0, 0, 0.33);
   }
-  
-  
-  
+
+
+
   .counter-container {
     background-color: rgb(75, 158, 61);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* Styles for the background of the counter section */
   .counter-background {
     background: url('../../assets/counter_bg7.png') no-repeat center center;
@@ -209,9 +209,9 @@
     padding: 20px;
     border-radius: 8px;
   }
-  
+
   /* Flexbox layout for the row */
-  
+
   /* Styles for each counter item */
   .counter-item {
     /* background: rgba(255, 255, 255, 0.8);  */
@@ -220,7 +220,7 @@
     text-align: center;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
   }
-  
+
   .mycardWithHeader{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -230,7 +230,63 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: scale(1.03);
   }
-  
+
   .headerWithImg{
     padding: 0;
   }
+
+
+  .video-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
