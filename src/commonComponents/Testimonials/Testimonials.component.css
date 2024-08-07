@@ -25,39 +25,3 @@
   margin-bottom: 20px;
 }
 
-.rating-section mat-icon {
-  color: #ff9800; /* Star color */
-  font-size: 1.5rem; /* Increase star size */
-}
-
-.image-section img {
-  border-radius: 50%; /* Circular images */
-  width: 100px; /* Fixed width */
-  height: 100px; /* Fixed height */
-  object-fit: cover; /* Ensure the image fits the circular shape */
-  margin-bottom: 20px;
-}
-
-.card-text {
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  font-size: 1rem;
-  color: #6c757d; /* Muted text color */
-}
-
-.card-title {
-  font-family: 'Arial', sans-serif;
-  font-size: 1.5rem;
-  color: #343a40; /* Dark text color */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #343a40; /* Dark background for control icons */
-  border-radius: 50%; /* Circular control icons */
-}
-
-.carousel-control-prev-icon::before,
-.carousel-control-next-icon::before {
-  color: #ffffff; /* White arrow icons */
-}
