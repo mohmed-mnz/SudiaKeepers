@@ -1,27 +1,46 @@
-/* Custom styles for the testimonial slider */
-.container-fluid.bg-body-tertiary {
-  background-color: #f8f9fa; /* Light grey background */
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.myh2 {
-  color: #343a40; /* Dark text color */
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
-
-.carousel {
-  margin-top: 30px;
-}
-
 .card {
-  border: none; /* Remove default border */
-  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 3vh;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .quotes {
-  color: #ff9800; /* Accent color for quote icon */
-  margin-bottom: 20px;
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
+.rating-section .filled-star {
+  color: #ffcc00;
+}
+
+.rating-section .empty-star {
+  color: #ccc;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+}

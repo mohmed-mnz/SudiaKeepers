@@ -11,7 +11,7 @@ declare var bootstrap: any;
   imports: [
     MatIconModule,
     CommonModule,
-    MdbCarouselModule 
+    MdbCarouselModule
   ],
   templateUrl: './Testimonials.component.html',
   styleUrls: ['./Testimonials.component.css']
@@ -19,14 +19,14 @@ declare var bootstrap: any;
 export class TestimonialsComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) { }
 
- 
+
   ngAfterViewInit() {
     const carouselElement = document.getElementById('testimonialCarousel');
     if (carouselElement) {
       const carousel = new bootstrap.Carousel(carouselElement, {
-        interval: 4500
+        interval: 5000
       });
     }
   }
-  
+
 }
