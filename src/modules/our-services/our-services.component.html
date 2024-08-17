@@ -26,119 +26,36 @@
       </p>
     </div>
     <div class="row">
-      <!-- Card 1 -->
-      <div class="col-md-3">
-        <div class="service-card">
+<!-- Service Cards -->
+<div class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let service of services">
+        <div class="service-card" (click)="openImage(service.imageSrc)">
           <div class="card-image">
-            <img src="assets/u2.jpg" alt="Service 1">
-            <div class="overlay"></div>
+            <img [src]="service.imageSrc" [alt]="service.title">
+            <div class="overlay">
+              <h3 class="overlay-title">{{ service.title }}</h3>
+              <p class="overlay-description">{{ service.description }}</p>
+            </div>
           </div>
           <div class="card-content">
-            <h3 class="card-title">مظلات وبرجولات</h3>
-            <p class="card-description">نقوم بتوفير مظلات وبرجولات بأعلى جودة لتوفير الظل والمساحة المناسبة. نضمن لك المتانة والجمال في تصاميمنا.</p>
+            <h3 class="card-title">{{ service.title }}</h3>
+            <p class="card-description">{{ service.description }}</p>
             <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
           </div>
         </div>
       </div>
-      <!-- Card 2 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/p4.jpg" alt="Service 2">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">ديكورات صناعية</h3>
-            <p class="card-description">تصميم ديكورات صناعية مميزة تعطي لمسة جمالية وفنية للمكان. نقدم لك أفكارًا مبتكرة لخلق بيئة مميزة تلبي رغباتك.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
+    </div>
+  </div>
+</div>
 
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/o1.jpg" alt="Service 3">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">تركيب عشب جداري</h3>
-            <p class="card-description">نقوم بتركيب العشب الجداري لتجميل الأماكن الخارجية بلمسة خضراء. احصل على جدار نباتي رائع يزيد من جمال المكان.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/gn1.jpg" alt="Service 4">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">زراعة نجيل طبيعي</h3>
-            <p class="card-description">نوفر خدمة زراعة النجيل الطبيعي بأفضل أنواع الجودة. استفد من خبرتنا لضمان نمو صحي وطبيعي لنجيل حديقتك الفاخرة.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 5 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/R3.jpg" alt="Service 5">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">تركيب شبكات ري</h3>
-            <p class="card-description">نوفر خدمات تركيب شبكات الري الأوتوماتيكية لمختلف المساحات، مع ضمان توفير المياه والحفاظ على النباتات بشكل راقي وجميل في جميع الأوقات.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/G1.jpg" alt="Service 6">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">تركيبات عشب صناعي</h3>
-            <p class="card-description">نقوم بتركيب العشب الصناعي بجودة عالية ومقاومة للعوامل الجوية، مما يوفر منظرًا طبيعيًا دون عناء الصيانة المستمرة طوال العام.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 7 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/a1.jpg" alt="Service 7">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">توفير نخيل</h3>
-            <p class="card-description">نوفر نخيل من مختلف الأنواع لتزيين الحدائق والمساحات الخارجية، مما يضفي لمسة فاخرة وجميلة على المكان ويزيد من جماله.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 8 -->
-      <div class="col-md-3">
-        <div class="service-card">
-          <div class="card-image">
-            <img src="assets/G3.jpg" alt="Service 8">
-            <div class="overlay"></div>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">طلبات توريد</h3>
-            <p class="card-description">نقوم بتلبية طلبات التوريد للنباتات والمواد الزراعية، مع ضمان أفضل الأسعار والجودة والخدمة السريعة لتلبية احتياجاتك في أقصر وقت ممكن.</p>
-            <a class="btn btn-primary" href="tel:+966533927072">اتصل بنا</a>
-          </div>
-        </div>
-      </div>
+<!-- Overlay for full-screen image display -->
+<div class="overlay-backdrop" [ngClass]="{'show': isOverlayOpen}" (click)="closeImage()">
+  <div class="overlay-image">
+    <img [src]="selectedImageSrc" *ngIf="selectedImageSrc">
+  </div>
+</div>
 
 
 <!-- section three -->

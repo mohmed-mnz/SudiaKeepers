@@ -32,7 +32,7 @@
   <button class="filter-button" [class.active]="selectedFilter === 'all'" (click)="filterItems('all')">الكل</button>
 </div>
 <div class="portfolio-grid">
-  <div class="portfolio-item" *ngFor="let item of filteredImages" @fadeInOut>
+  <div class="portfolio-item" *ngFor="let item of filteredImages" (click)="openImage(item.url)">
     <div class="image-container">
       <div class="spinner" *ngIf="!item.loaded"></div>
       <img [src]="item.url"
@@ -45,3 +45,13 @@
     </div>
   </div>
 </div>
+
+<!-- Full-Screen Image Overlay -->
+
+<div class="image-overlay" [ngClass]="{ 'show': selectedImageSrc !== null }" (click)="closeImage()">
+  <div class="overlay-content" (click)="$event.stopPropagation()">
+    <img [src]="selectedImageSrc" *ngIf="selectedImageSrc">
+    <button class="close-btn" (click)="closeImage()">×</button>
+  </div>
+</div>
+

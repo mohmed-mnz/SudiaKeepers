@@ -129,4 +129,16 @@ export class OurWorkComponent {
       : this.portfolioItems.filter(item => item.category === this.selectedFilter);
     return items.flatMap(item => item.images.map(image => ({ ...image, description: item.description })));
   }
+
+  selectedImageSrc: string | null = null;
+
+  openImage(src: string): void {
+    this.selectedImageSrc = src;
+  }
+
+  closeImage(): void {
+    this.selectedImageSrc = null;
+  }
+
+
 }
