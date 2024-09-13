@@ -18,6 +18,7 @@ import { FountainsComponent } from '../modules/our-services/childs/fountains/fou
 import { PestControlComponent } from '../modules/our-services/childs/pest-control/pest-control.component';
 import { WaterfallComponent } from '../modules/our-services/childs/waterfall/waterfall.component';
 import { IrrigationNetworkComponent } from '../modules/our-services/childs/irrigation-network/irrigation-network.component';
+import { SocialMediaComponent } from '../modules/social-media/social-media.component';
 
 export const routes: Routes = [
   {
@@ -41,8 +42,9 @@ export const routes: Routes = [
       { path: 'pestControl',component:PestControlComponent},
       { path: 'Waterfall',component:WaterfallComponent},
       { path: 'irrigationNetwork',component:IrrigationNetworkComponent},
+      {path: 'SocialMedia',component:SocialMediaComponent}
     ]
   },
-  
+
   ];
-  
+

@@ -4,14 +4,16 @@ import {  FooterComponent} from '../footer/footer.component';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { SocialMediaComponent } from "../../modules/social-media/social-media.component";
 @Component({
   selector: 'app-main-layout',
   standalone: true,
   imports: [
     HeaderComponent,
     FooterComponent,
-    RouterOutlet
-  ],
+    RouterOutlet,
+    SocialMediaComponent
+],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css'
 })

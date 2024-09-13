@@ -1,0 +1,76 @@
+/* Social Icons Container (Initially Hidden) */
+#social-icons {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px; /* Larger width for bigger icons */
+  height: 0; /* Initially hidden (height: 0) */
+  overflow: hidden; /* Hide the icons */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  opacity: 0; /* Make the container invisible initially */
+  transition: all 0.3s ease-in-out;
+}
+
+/* When the active class is added, show the icons */
+#social-icons.active {
+  height: auto;
+  opacity: 1;
+}
+
+/* Social media icons */
+#social-icons a {
+  color: #4CAF50;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px; /* Bigger icons */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0; /* Spacing between icons */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#social-icons a:hover {
+  background-color: #4CAF50;
+  color: white;
+  transform: scale(1.2); /* Increase icon size on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Icon size */
+#social-icons i {
+  font-size: 24px; /* Bigger icons */
+}
+
+/* Toggle button */
+#toggle-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  width: 70px; /* Bigger button */
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 28px; /* Larger icon for toggle button */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+  z-index: 10001;
+}
+
+#toggle-icons:hover {
+  background-color: #388E3C;
+  transform: rotate(90deg); /* Rotate effect on hover */
+}
